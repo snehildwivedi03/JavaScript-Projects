@@ -39,7 +39,7 @@ h1 {
     flex-wrap: wrap;
     margin-bottom: 4rem;
     /* To wrap cards to the next row */
-    justify-content: space-between;
+   gap: 25px;
     /* To evenly space cards horizontally */
 }
 
