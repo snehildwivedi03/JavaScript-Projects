@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #e2e8f0;
+    background-color: #92b0d7;
 }
 
 header {
@@ -71,4 +71,7 @@ transform: scale(1.05);
     border-radius: 4px;
     font-family: "Inconsolata",monospace;
    
-}
+}   
+
+
+
