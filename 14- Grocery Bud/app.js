@@ -30,7 +30,7 @@ function addItem(e) {
     displayAlert("please enter value", "danger");
   }
 }
-//display alert
+//display alert on screen
 function displayAlert(text, action) {
   alert.textContent = text;
   alert.classList.add(`alert-${action}`);
