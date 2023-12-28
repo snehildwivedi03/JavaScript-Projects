@@ -7,3 +7,10 @@ function getElement(selection) {
     `Please check "${selection}" selector, no such element exists`
   );
 }
+
+//constructor function
+
+function Gallery(element) {}
+
+const nature = new Gallery(getElement(".nature"));
+const city = new Gallery(getElement(".city"));
