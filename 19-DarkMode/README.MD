@@ -6,7 +6,8 @@
   - nav
     - div.nav-center
       - span 'overreacted'
-      - button.btn 'toggle'
+      - button.btn 'Dark Mode'
+        //after nav
   - section.articles
     - article.post
       - h2 'post title'
