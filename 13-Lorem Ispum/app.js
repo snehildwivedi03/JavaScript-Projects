@@ -16,16 +16,14 @@ const amount = document.getElementById("amount");
 const result = document.querySelector(".lorem-text");
 
 form.addEventListener("submit", function (e) {
-  // A click on a form submit button – initiates its submission to the server.
-
   e.preventDefault();
 
   const value = parseInt(amount.value);
-  const random = Math.floor(Math.random() * text.length);
 
   if (isNaN(value) || value < 0 || value > 9) {
-    result.innerHTML = `<p class="result">${text[random]}</p>`;
+    result.innerHTML = `<p class="result error">Please enter a valid number between 0 and 9.</p>`;
   } else {
+    const random = Math.floor(Math.random() * text.length);
     let tempText = text.slice(0, value);
     tempText = tempText
       .map(function (item) {
