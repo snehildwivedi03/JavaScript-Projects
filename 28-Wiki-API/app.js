@@ -6,7 +6,6 @@ const inputDOM = document.querySelector(".form-input");
 const resultDOM = document.querySelector(".results");
 
 formDOM.addEventListener("submit", (e) => {
-  // Fixed typo here
   e.preventDefault();
   const value = inputDOM.value;
   if (!value) {
@@ -18,5 +17,11 @@ formDOM.addEventListener("submit", (e) => {
 });
 
 const fetchPages = async (searchValue) => {
-  console.log(searchValue);
+  resultDOM.innerHTML = `<div class="loading"></div>`;
+  try {
+    const response = await fetch(`${url}${searchValue}`);
+    const data = await response.json();
+  } catch (error) {
+    resultDOM.innerHTML = `<div class="error">there was an error...</div>`;
+  }
 };
