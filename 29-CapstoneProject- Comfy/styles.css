@@ -590,7 +590,7 @@ product
 .featured-center {
   margin: 3rem auto 2rem auto;
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
   min-height: 6rem;
   position: relative;
 }
