@@ -17,32 +17,33 @@ const priceDOM = getElement(".single-product-price");
 const colorsDOM = getElement(".single-product-colors");
 const descDOM = getElement(".single-product-desc");
 const cartBtn = getElement(".addToCartBtn");
+const defImg = document.getElementById("defImg");
 
 // cart product
 let productID;
 
 // show product when page loads
-
 window.addEventListener("DOMContentLoaded", async function () {
-  const urlID = this.window.location.search;
+  const urlID = window.location.search;
+
   try {
     const response = await fetch(`${singleProductUrl}${urlID}`);
     if (response.status >= 200 && response.status <= 299) {
       const product = await response.json();
-      //grab data
+      // grab data
       const { id, fields } = product;
       productID = id;
 
       const { name, company, price, colors, description } = fields;
       const image = fields.image[0].thumbnails.large.url;
 
-      //set values
+      // set values
 
       document.title = `${name.toUpperCase()} | Comfy`;
       pageTitleDOM.textContent = `Home / ${name}`;
       imgDOM.src = image;
       titleDOM.textContent = name;
-      companyDOM.textContent = company;
+      companyDOM.textContent = `by ${company}`;
       priceDOM.textContent = formatPrice(price);
       descDOM.textContent = description;
       colors.forEach((color) => {
@@ -54,13 +55,11 @@ window.addEventListener("DOMContentLoaded", async function () {
     } else {
       console.log(response.status, response.statusText);
       centerDOM.innerHTML = `
-        <div>
-        <h3 class"error">
-sorry, something went wrong
-        </h3>
-        <a href="index.htm" class ="btn">back home</a>
-        </div>
-        `;
+    <div>
+    <h3 class="error">sorry, something went wrong</h3>
+    <a href="index.html" class="btn">back home</a>
+    </div> 
+     `;
     }
   } catch (error) {
     console.log(error);
@@ -68,6 +67,7 @@ sorry, something went wrong
 
   loading.style.display = "none";
 });
+
 cartBtn.addEventListener("click", function () {
   addToCart(productID);
 });
