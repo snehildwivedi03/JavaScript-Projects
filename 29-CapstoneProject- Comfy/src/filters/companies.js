@@ -26,7 +26,7 @@ const setupCompanies = (store) => {
       }
 
       // Display the products based on the newStore
-      display(newStore, getElement(".products-container"));
+      display(newStore, getElement(".products-container"), true);
     }
   });
 };
