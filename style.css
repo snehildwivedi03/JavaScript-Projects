@@ -1,0 +1,158 @@
+@import url(./stylingComp/buttons.css);
+@import url(./stylingComp/cards.css);
+@import url(./stylingComp/oops&api.css);
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section-top {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.bg {
+  animation: slide 4.8s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: absolute;
+  max-height: 700px;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4.5s;
+}
+
+.bg3 {
+  animation-duration: 5.5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+.myimg {
+  border-radius: 50%;
+  max-width: 30%;
+  float: right;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+.animated-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  min-width: 260px;
+  position: relative;
+}
+
+.animated-item {
+  font-family: "Mukta", sans-serif;
+  color: rgb(30, 0, 119);
+  font-size: 50px;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 445px;
+  animation: BottomTotop 6s linear infinite 0s;
+  white-space: nowrap;
+}
+
+.animated-item:nth-child(2n + 2) {
+  animation-delay: 3s;
+}
+
+@keyframes BottomTotop {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  5%,
+  30%,
+  80% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+.section-heading {
+  font-family: "Mukta", sans-serif;
+  font-size: 50px;
+  white-space: nowrap;
+  position: relative;
+  top: 150px;
+  left: 150px;
+  transform-origin: bottom right;
+}
+
+.desc-para {
+  font-family: "Mukta", sans-serif;
+  position: relative;
+  top: 120px;
+  left: 150px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.featured-works {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 40px;
+  font-size: 40px;
+  font-family: "Mukta", sans-serif;
+}
+.title-underline {
+  position: relative;
+  border-radius: 30px;
+  top: 22px;
+  height: 0.3rem;
+  width: 12rem;
+  background: #3dd1e7;
+  margin: -1rem auto 0px;
+}
+
+.works-info {
+  position: relative;
+  height: 750px;
+  bottom: 40px;
+  background-color: #cccccc;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  top: 110px;
+}
+.desc-work {
+  margin-right: 50px;
+}

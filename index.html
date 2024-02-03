@@ -1,271 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My JavaScript Projects</title>
-    <link rel="stylesheet" href="./home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .placeholder-content {
+        height: 1500px;
+      }
+    </style>
   </head>
-
   <body>
-    <header>
-      <h1>My JavaScript Projects</h1>
-      <div class="title-underline"></div>
-    </header>
-    <main>
-      <ul class="project-list">
-        <li>
-          <a class="project-link" href="./01-ColorFlipper/index.html">
-            <div class="card-content">
-              <img src="./images/color_flipper.png" alt="Project 1" />
-              <div class="project-title">Color Flipper</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./02-Counter/index.html">
-            <div class="card-content">
-              <img src="./images/counter.png" alt="Project 2" />
-              <div class="project-title">Counter</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./03-Reviews/index.html">
-            <div class="card-content">
-              <img src="./images/reviews.png" alt="Project 3" />
-              <div class="project-title">Review Carousel</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./04-Navbar/index.html">
-            <div class="card-content">
-              <img src="./images/navbar.png" alt="Project 4" />
-              <div class="project-title">Responsive Navbar</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./05-Sidebar/index.html">
-            <div class="card-content">
-              <img src="./images/sidebar.png" alt="Project 5" />
-              <div class="project-title">Responsive Sidebar</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./06-Modal/index.html">
-            <div class="card-content">
-              <img src="./images/modalPopup.png" alt="Project 6" />
-              <div class="project-title">Modal Popup</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./07-Questions/index.html">
-            <div class="card-content">
-              <img src="./images/questions.png" alt="Project 7" />
-              <div class="project-title">Question Tabs</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./08-Menu/index.html">
-            <div class="card-content">
-              <img src="./images/menu.png" alt="Project 8 " />
-              <div class="project-title">Menu</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./09-Video/index.html">
-            <div class="card-content">
-              <img src="./images/preloader.png" alt="Project 9 " />
-              <div class="project-title">Video Project</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./10-Scroll/index.html">
-            <div class="card-content">
-              <img src="./images/Scroll.png" alt="Project 10 " />
-              <div class="project-title">Scroll Project</div>
-            </div>
-          </a>
-        </li>
+    <section class="section-top">
+      <div class="section-top-info">
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="my-image">
+          <img src="./image/myimg.jpeg" class="myimg" alt="" />
+        </div>
+        <!-- background div -->
+        <div class="animated-info">
+          <h1 class="section-heading">Hey folks, I'm</h1>
+          <h2 class="animated-item">Snehil Dwivedi</h2>
+          <h3 class="animated-item">Frontend Developer</h3>
+        </div>
+        <div class="section-para">
+          <p class="desc-para">
+            I've skills in HTML, CSS, and JavaScript. I'm passionate about
+            transforming stunning and interactive<br />
+            websites. Explore my portfolio to see projects where I've seamlessly
+            blended design and functionality. <br />From personal websites to
+            dynamic applications, I bring creativity and technical skill to
+            every project.
+          </p>
+        </div>
+        <button class="button-74" role="button">My Works</button>
+      </div>
+    </section>
 
-        <li>
-          <a class="project-link" href="./11-Tabs/index.html">
-            <div class="card-content">
-              <img src="./images/tabs.png" alt="Project 11 " />
-              <div class="project-title">Tabs Project</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./12-CountDown/index.html">
-            <div class="card-content">
-              <img src="./images/countdown.png" alt="Project 12 " />
-              <div class="project-title">CountDown</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./13-Lorem Ispum/index.html">
-            <div class="card-content">
-              <img src="./images/lorem ispum.png" alt="Project 13 " />
-              <div class="project-title">Lorem Ispum Project</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./14- Grocery Bud/index.html">
-            <div class="card-content">
-              <img src="./images/Grocery.png" alt="Project 14 " />
-              <div class="project-title">Grocery-Bud</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="./15-Slider/index.html">
-            <div class="card-content">
-              <img src="./images/slider.png" alt="Project 15 " />
-              <div class="project-title">Slider</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <!-- opps project -->
-      <ul class="project-list-oop">
-        <div class="oops">
-          <h1>OOPs Projects</h1>
+    <article class="my-works">
+      <section class="works-info">
+        <h2 class="featured-works">Featured projects</h2>
+        <div class="title-underline"></div>
+        <div class="container" onclick="openNewWindow(event)">
+          <div class="work1">
+            <a
+              href="../29-CapstoneProject- Comfy/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <div
+                class="card"
+                data-url="../29-CapstoneProject- Comfy/index.html"
+              >
+                <img src="./image/work1.png" alt="" />
+                <div class="card__content">
+                  <p class="card__title">Comfy Store</p>
+                  <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                </div>
+              </div>
+              <p class="name1">E-commerce Store</p>
+            </a>
+          </div>
+          <div class="work2">
+            <a
+              href="../26-Stripe-SubMenu/index.html"
+              class="work2-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <div class="card" data-url="../26-Stripe-SubMenu/index.html">
+                <img src="./image/work2.png" alt="" />
+                <div class="card__content">
+                  <p class="card__title">Card Title</p>
+                  <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                </div>
+              </div>
+              <p class="name2">Stripe Sub-Menu</p>
+            </a>
+          </div>
+          <div class="work3">
+            <a
+              href="../23-Random-User/index.html"
+              class="work3-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <div class="card" data-url="../23-Random-User/index.html">
+                <img src="./image/work3.png" alt="" />
+                <div class="card__content">
+                  <p class="card__title">Card Title</p>
+                  <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                </div>
+              </div>
+              <p class="name3">Random User</p>
+            </a>
+          </div>
+          <div class="work4">
+            <a
+              href="../28-Wiki-API/index.html"
+              class="work4-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <div class="card" data-url="../28-Wiki-API/index.html">
+                <img src="./image/work4.png" alt="" />
+                <div class="card__content">
+                  <p class="card__title">Card Title</p>
+                  <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                </div>
+              </div>
+              <p class="name4">Wikipedia API</p>
+            </a>
+          </div>
         </div>
-        <li>
-          <a class="project-link-oop" href="./16-Counter-OOP/index.html">
-            <div class="card-content">
-              <img src="./images/Counter-OOP.png" alt="Project 16 " />
-              <div class="project-title">Double Counter</div>
+      </section>
+    </article>
+
+    <!-- oops projects -->
+    <section class="oops-projects">
+      <div class="oops-project-container">
+        <div class="oops-card-info">
+          <div class="oops-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="oops-card-title">Card Title</p>
+              <p class="oops-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./17-Gallery/index.html">
-            <div class="card-content">
-              <img src="./images/gallery.png" alt="Project 17 " />
-              <div class="project-title">Gallery</div>
+          </div>
+          <div class="oops-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="oops-card-title">Card Title</p>
+              <p class="oops-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./18-Numbers/index.html">
-            <div class="card-content">
-              <img src="./images/numbers.png" alt="Project 18 " />
-              <div class="project-title">Number-Counter</div>
+          </div>
+          <div class="oops-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="oops-card-title">Card Title</p>
+              <p class="oops-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./19-DarkMode/index.html">
-            <div class="card-content">
-              <img src="./images/darkmode.png" alt="Project 19 " />
-              <div class="project-title">Dark-Mode</div>
+          </div>
+          <div class="oops-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="oops-card-title">Card Title</p>
+              <p class="oops-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./20-Filters/index.html">
-            <div class="card-content">
-              <img src="./images/filter.png" alt="Project 20  " />
-              <div class="project-title">Filter</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <ul class="project-api">
-        <div class="api">
-          <h1>API Projects</h1>
+          </div>
         </div>
-        <li>
-          <a class="project-link-oop" href="./21-Dad Jokes/index.html">
-            <div class="card-content">
-              <img src="./images/dadjokesapi.png" alt="Project 21 " />
-              <div class="project-title">Dad Jokes</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./22-Products/index.html">
-            <div class="card-content">
-              <img src="./images/products.png" alt="Project 22 " />
-              <div class="project-title">Products</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./23-Random-User/index.html">
-            <div class="card-content">
-              <img src="./images/randomUser.png" alt="Project 23" />
-              <div class="project-title">Random User</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./24-Cocktails/index.html">
-            <div class="card-content">
-              <img src="./images/cocktail.png" alt="Project 24" />
-              <div class="project-title">Cocktails</div>
-            </div>
-          </a>
-        </li>
-        <ul class="project-api"></ul>
-        <div class="oops">
-          <h1>More Projects</h1>
+        <!-- oops projects description -->
+        <div class="oops-title-info">
+          <h2 class="oops-title">OOPS Projects</h2>
+          <div class="title-underline-oops"></div>
+          <div class="desc-oops-projects">
+            <p class="desc-work">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+              doloremque exercitationem nulla officiis eos iste necessitatibus!
+              Voluptate rem quae temporibus veritatis accusamus culpa explicabo
+              doloremque, dolor, at tempora cupiditate labore!
+            </p>
+            <ul class="desc-work-pts">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+            <button class="button-29" role="button">API Projects</button>
+          </div>
         </div>
-        <li>
-          <a class="project-link-oop" href="./25-Slider/index.html">
-            <div class="card-content">
-              <img src="./images/slider-js.png" alt="Project 25" />
-              <div class="project-title">Slider</div>
+      </div>
+    </section>
+    <!-- api projects -->
+    <section class="api-projects">
+      <div class="api-project-container">
+        <div class="api-title-info">
+          <h2 class="api-title">API Projects</h2>
+          <div class="title-underline-api"></div>
+          <div class="desc-api-projects">
+            <p class="desc-work">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+              doloremque exercitationem nulla officiis eos iste necessitatibus!
+              Voluptate rem quae temporibus veritatis accusamus culpa explicabo
+              doloremque, dolor, at tempora cupiditate labore!
+            </p>
+            <ul class="desc-work-pts">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </div>
+        <div class="api-card-info">
+          <div class="oops-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="api-card-title">Card Title</p>
+              <p class="api-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./26-Stripe-SubMenu/index.html">
-            <div class="card-content">
-              <img src="./images/stripe-submenu.png" alt="Project 26" />
-              <div class="project-title">Stripe-SubMenu</div>
+          </div>
+          <div class="api-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="api-card-title">Card Title</p>
+              <p class="api-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./27-Pagination/index.html">
-            <div class="card-content">
-              <img src="./images/pagination.png" alt="Project 27" />
-              <div class="project-title">Pagination</div>
+          </div>
+          <div class="api-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="api-card-title">Card Title</p>
+              <p class="api-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a class="project-link-oop" href="./28-Wiki-API/index.html">
-            <div class="card-content">
-              <img src="./images/wikiapi.png" alt="Project 28" />
-              <div class="project-title">Wiki API</div>
+          </div>
+          <div class="api-card">
+            <img src="./image/myimg.jpeg" alt="" />
+            <div class="oops-card-content">
+              <p class="api-card-title">Card Title</p>
+              <p class="api-cards-des">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
             </div>
-          </a>
-        </li>
-        <li>
-          <a
-            class="project-link-oop"
-            href="./29-CapstoneProject- Comfy/index.html"
-          >
-            <div class="card-content">
-              <img src="./images/Capstone.png" alt="Project 29" />
-              <div class="project-title">Comfy</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </main>
+          </div>
+        </div>
+      </div>
+      <button class="button-30" role="button">OOPS Projects</button>
+    </section>
+    <div class="placeholder-content"></div>
+
+    <script src="./script.js"></script>
   </body>
 </html>

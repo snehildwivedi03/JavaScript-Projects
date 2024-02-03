@@ -1,0 +1,107 @@
+.oops-card {
+  box-shadow: 0 0 0 5px #3dd1e7;
+  overflow: hidden;
+}
+
+.oops-project-container {
+  background-color: #a2a2a2;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 100px;
+}
+
+.oops-card-info {
+  flex: 0.6;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-left: 200px;
+  padding-top: 55px;
+  justify-content: space-evenly;
+}
+.oops-title-info {
+  flex: 0.4;
+
+  font-family: "Mukta", sans-serif;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+.oops-title {
+  position: relative;
+  bottom: 30px;
+  margin-left: 135px;
+  font-size: 40px;
+}
+.desc-work {
+  font-size: 20px;
+}
+.desc-work-pts {
+  font-size: 20px;
+}
+.title-underline-oops {
+  position: relative;
+  border-radius: 30px;
+  top: -48px;
+  right: 80px;
+  height: 0.3rem;
+  width: 12rem;
+  background: #3dd1e7;
+  margin: -1rem auto 0px;
+}
+
+.api-project-container {
+  background-color: #f2f2f2;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 100px;
+}
+.title-underline-api {
+  position: relative;
+  border-radius: 30px;
+  top: -50px;
+  left: -30px;
+  height: 0.3rem;
+  width: 12rem;
+  background: #3dd1e7;
+  margin: -1rem auto 0px;
+}
+.api-card-info {
+  flex: 0.6;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-left: 200px;
+  padding-top: 55px;
+  justify-content: space-evenly;
+}
+.api-card {
+  box-shadow: 0 0 0 5px #3dd1e7;
+  overflow: hidden;
+}
+.api-title-info {
+  flex: 0.4;
+
+  font-family: "Mukta", sans-serif;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+.api-title {
+  position: relative;
+  bottom: 30px;
+  left: 200px;
+  font-size: 40px;
+}
+.desc-work {
+  font-size: 20px;
+}
+.desc-work-pts {
+  font-size: 20px;
+}
