@@ -8,9 +8,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
       .placeholder-content {
-        height: 1500px;
+        height: 340px;
       }
     </style>
   </head>
@@ -40,6 +44,9 @@
           </p>
         </div>
         <button class="button-74" role="button">My Works</button>
+        <button class="button-75" id="resumebtn" role="button">
+          My Resume
+        </button>
       </div>
     </section>
 
@@ -47,26 +54,25 @@
       <section class="works-info">
         <h2 class="featured-works">Featured projects</h2>
         <div class="title-underline"></div>
-        <div class="container" onclick="openNewWindow(event)">
+        <div class="container">
           <div class="work1">
             <a
-              href="../29-CapstoneProject- Comfy/index.html"
+              href="./29-CapstoneProject- Comfy/index.html"
               class="work1-link"
               target=" "
               rel="noopener noreferrer"
             >
-              <div
-                class="card"
-                data-url="../29-CapstoneProject- Comfy/index.html"
-              >
+              <div class="card-fea">
                 <img src="./image/work1.png" alt="" />
                 <div class="card__content">
                   <p class="card__title">Comfy Store</p>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco.
+                    In my recent project, I've developed a new e-commerce
+                    website. I used HTML, CSS, and JavaScript, including some
+                    advanced ES6 features. By using APIs carefully, I made sure
+                    the site can show dynamic information and work smoothly. The
+                    result is an easy-to-use online store that offers a great
+                    shopping experience.
                   </p>
                 </div>
               </div>
@@ -75,20 +81,21 @@
           </div>
           <div class="work2">
             <a
-              href="../26-Stripe-SubMenu/index.html"
-              class="work2-link"
+              href="./26-Stripe-SubMenu/index.html"
+              class="work1-link"
               target=" "
               rel="noopener noreferrer"
             >
-              <div class="card" data-url="../26-Stripe-SubMenu/index.html">
+              <div class="card-fea">
                 <img src="./image/work2.png" alt="" />
                 <div class="card__content">
-                  <p class="card__title">Card Title</p>
+                  <p class="card__title">Stripe Sub-Menu</p>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco.
+                    In this project, I created a Stripe submenu using HTML, CSS,
+                    and JavaScript. By implementing basic and advanced
+                    JavaScript techniques, I ensured smooth navigation and
+                    functionality. The result is a user-friendly submenu system
+                    , enhancing the overall user experience.
                   </p>
                 </div>
               </div>
@@ -97,42 +104,47 @@
           </div>
           <div class="work3">
             <a
-              href="../23-Random-User/index.html"
-              class="work3-link"
+              href="./23-Random-User/index.html"
+              class="work1-link"
               target=" "
               rel="noopener noreferrer"
             >
-              <div class="card" data-url="../23-Random-User/index.html">
+              <div class="card-fea">
                 <img src="./image/work3.png" alt="" />
                 <div class="card__content">
-                  <p class="card__title">Card Title</p>
+                  <p class="card__title">Random User</p>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco.
+                    In this project, I utilized the Random User API to create a
+                    dynamic application. Using HTML, CSS, and JavaScript, I
+                    crafted a user interface that fetches and displays random
+                    user data. Leveraging the power of APIs, the project offers
+                    an interactive experience, allowing users to explore diverse
+                    profiles with ease.
                   </p>
                 </div>
               </div>
-              <p class="name3">Random User</p>
+              <p class="name3">Random User API</p>
             </a>
           </div>
           <div class="work4">
             <a
-              href="../28-Wiki-API/index.html"
-              class="work4-link"
+              href="./28-Wiki-API/index.html"
+              class="work1-link"
               target=" "
               rel="noopener noreferrer"
             >
-              <div class="card" data-url="../28-Wiki-API/index.html">
+              <div class="card-fea">
                 <img src="./image/work4.png" alt="" />
                 <div class="card__content">
-                  <p class="card__title">Card Title</p>
+                  <p class="card__title">Wikipedia-API</p>
                   <p class="card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco.
+                    In this project, I delved into the Wikipedia API to develop
+                    an informative application. Using HTML, CSS, and JavaScript,
+                    I created a user-friendly interface that fetches and
+                    presents data from Wikipedia articles. By leveraging the
+                    API's capabilities, the project offers a seamless
+                    experience, enabling users to access a wealth of knowledge
+                    effortlessly.
                   </p>
                 </div>
               </div>
@@ -147,49 +159,88 @@
     <section class="oops-projects">
       <div class="oops-project-container">
         <div class="oops-card-info">
+          <p class="oopname1">Gallery</p>
           <div class="oops-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="oops-card-title">Card Title</p>
-              <p class="oops-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
+            <a
+              href="./17-Gallery/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/gallery.png" alt="" />
+              <div class="oops-card-content">
+                <p class="oops-card-title">Gallery</p>
+                <p class="oops-cards-des">
+                  In my JavaScript gallery project, I've utilized
+                  Object-Oriented Programming principles to create a dynamic
+                  image gallery. I've crafted modular and interactive features,
+                  resulting in a versatile and user-friendly applicatiom.
+                </p>
+              </div>
+            </a>
+          </div>
+          <p class="oopname2">Dark Mode</p>
+          <div class="oops-card">
+            <a
+              href="./19-DarkMode/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/darkmode.png" alt="" />
+              <div class="oops-card-content">
+                <p class="oops-card-title">Dark Mode</p>
+                <p class="oops-cards-des">
+                  In my dark mode project, I've used JavaScript's OOP principles
+                  to seamlessly toggle between light and dark themes. Through
+                  encapsulation and modular design, I've created a flexible and
+                  user-friendly experience, showcasing my adeptness in OOP and
+                  enhancing user customization.
+                </p>
+              </div>
+            </a>
+          </div>
+          <p class="oopname3">Numbers</p>
+          <p class="oopname4">Counter</p>
+          <div class="oops-card">
+            <a
+              href="./18-Numbers/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/numbers.png" alt="" />
+              <div class="oops-card-content">
+                <p class="oops-card-title">Numbers</p>
+                <p class="oops-cards-des">
+                  In my counting numbers project, I've used JavaScript to create
+                  a dynamic counter. By applying OOP principles, I've developed
+                  a simple yet engaging feature that incrementally displays
+                  numbers. This project showcases my ability to leverage
+                  JavaScript for interactive and visually appealing
+                  functionality.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="oops-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="oops-card-title">Card Title</p>
-              <p class="oops-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
-          </div>
-          <div class="oops-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="oops-card-title">Card Title</p>
-              <p class="oops-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
-          </div>
-          <div class="oops-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="oops-card-title">Card Title</p>
-              <p class="oops-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
+            <a
+              href="./16-Counter-OOP/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/counteroop.png" alt="" />
+              <div class="oops-card-content">
+                <p class="oops-card-title">Counter</p>
+                <p class="oops-cards-des">
+                  In my counter project, I've utilized JavaScript to create a
+                  dynamic counting feature. Through simple yet effective
+                  programming techniques, I've developed a functional counter
+                  that incrementally displays numbers.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
         <!-- oops projects description -->
@@ -198,19 +249,24 @@
           <div class="title-underline-oops"></div>
           <div class="desc-oops-projects">
             <p class="desc-work">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-              doloremque exercitationem nulla officiis eos iste necessitatibus!
-              Voluptate rem quae temporibus veritatis accusamus culpa explicabo
-              doloremque, dolor, at tempora cupiditate labore!
+              In my JavaScript OOP projects, I've applied key concepts such as
+              encapsulation, inheritance, polymorphism, and abstraction. Through
+              these projects, I've learned to structure code for clarity, reuse
+              hierarchical relationships efficiently, enable flexible behaviors,
+              and simplify complex systems. These experiences have deepened my
+              understanding of JavaScript's OOP paradigm and enhanced my ability
+              to develop scalable and maintainable applications.
             </p>
             <ul class="desc-work-pts">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
+              <li>I've embraced principles of OOP.</li>
+              <li>
+                These projects have thought me JavaScript's OOP capabilities.
+              </li>
+              <li>
+                I've cultivated proficiency in writing organized code
+                structures.
+              </li>
             </ul>
-            <button class="button-29" role="button">API Projects</button>
           </div>
         </div>
       </div>
@@ -223,71 +279,290 @@
           <div class="title-underline-api"></div>
           <div class="desc-api-projects">
             <p class="desc-work">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-              doloremque exercitationem nulla officiis eos iste necessitatibus!
-              Voluptate rem quae temporibus veritatis accusamus culpa explicabo
-              doloremque, dolor, at tempora cupiditate labore!
+              In my API projects, JavaScript has been instrumental in seamlessly
+              integrating with diverse APIs, enriching web applications with
+              dynamic data. This hands-on experience has honed my skills in
+              handling asynchronous requests and efficiently managing API
+              responses. By incorporating real-time data from external sources,
+              I've elevated user interaction and provided enhanced
+              functionality.<br />
+              Key points include:
             </p>
             <ul class="desc-work-pts">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
+              <li>Utilizing JavaScript to make HTTP requests.</li>
+              <li>Dynamically updating webpage content with real-time data.</li>
+              <li>Enhancing user interaction by using APIs.</li>
             </ul>
           </div>
         </div>
+        <p class="apiname1">Dad Jokes</p>
         <div class="api-card-info">
-          <div class="oops-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="api-card-title">Card Title</p>
-              <p class="api-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
+          <div class="api-card">
+            <a
+              href="./21-Dad Jokes/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/dasjokes.png" alt="" />
+              <div class="oops-card-content">
+                <p class="api-card-title">Dad Jokes</p>
+                <p class="api-cards-des">
+                  In my dad jokes API project, I've utilized JavaScript to fetch
+                  and display jokes from a dedicated API source. Through this
+                  project, I've created a fun and interactive experience for
+                  users, allowing them to access and enjoy a collection of
+                  humorous dad jokes.
+                </p>
+              </div>
+            </a>
+          </div>
+          <p class="apiname2">Product</p>
+          <div class="api-card">
+            <a
+              href="./22-Products/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/products.png" alt="" />
+              <div class="oops-card-content">
+                <p class="api-card-title">Products API</p>
+                <p class="api-cards-des">
+                  In my product API project, I've employed JavaScript to
+                  interact with a furniture-related API, retrieving and
+                  showcasing a diverse range of furniture products.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="api-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="api-card-title">Card Title</p>
-              <p class="api-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
+            <a
+              href="./20-Filters/index.html"
+              class="work1-link"
+              target=" "
+              rel="noopener noreferrer"
+            >
+              <img src="./image/filters.png" alt="" />
+              <div class="oops-card-content">
+                <p class="api-card-title">Filters</p>
+                <p class="api-cards-des">
+                  In my project featuring product filtering, I've employed
+                  JavaScript and API integration to enhance a product listing
+                  application. Users can now refine their searches, accessing
+                  tailored product selections.
+                </p>
+              </div>
+            </a>
           </div>
+          <p class="apiname3">Filters</p>
           <div class="api-card">
-            <img src="./image/myimg.jpeg" alt="" />
+            <img src="./image/cocktail.png" alt="" />
             <div class="oops-card-content">
-              <p class="api-card-title">Card Title</p>
+              <p class="api-card-title">Cocktail</p>
               <p class="api-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
+                In this project showcasing the Cocktail API, dynamic cocktail
+                data has been seamlessly integrated using JavaScript. Users can
+                now explore a diverse range of cocktails directly within the
+                application. The implementation of JavaScript has truly enhanced
+                the overall experience, making it both engaging and interactive.
               </p>
             </div>
           </div>
-          <div class="api-card">
-            <img src="./image/myimg.jpeg" alt="" />
-            <div class="oops-card-content">
-              <p class="api-card-title">Card Title</p>
-              <p class="api-cards-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-            </div>
-          </div>
+          <p class="apiname4">Cockatail</p>
         </div>
       </div>
-      <button class="button-30" role="button">OOPS Projects</button>
     </section>
-    <div class="placeholder-content"></div>
+    <article class="other-works">
+      <section class="other-works-info">
+        <h2 class="featured-works">Fun With JavaScript</h2>
+        <div class="title-underline"></div>
+        <!-- cards -->
+        <div class="wrapper">
+          <div class="cards">
+            <figure class="card">
+              <a
+                href="./01-ColorFlipper/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/cf.png"". alt=""class="img-fun" />
 
+                <figcaption>Color Flipper</figcaption>
+              </a>
+            </figure>
+
+            <figure class="card">
+              <a
+                href="./03-Reviews/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/REVIEWS.png"" alt=""class="img-fun" />
+
+                <figcaption>Reviews</figcaption>
+              </a>
+            </figure>
+
+            <figure class="card">
+              <a
+                href="./04-Navbar/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/navbaR.png"" alt=""class="img-fun" />
+
+                <figcaption>Navbar</figcaption>
+              </a>
+            </figure>
+
+            <figure class="card">
+              <a
+                href="./05-Sidebar/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/sideBAR.png"" alt=""class="img-fun" />
+
+                <figcaption>Sidebar</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./06-Modal/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/MODALPOPUP.png"" alt=""class="img-fun" />
+
+                <figcaption>Modal Popup</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./07-Questions/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/questions.png"" alt=""class="img-fun" />
+
+                <figcaption>Questions</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./08-Menu/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/ourMENU.png" alt="" class="img-fun" />
+
+                <figcaption>Menu</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./09-Video/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/videoProj.png" alt="" class="img-fun" />
+
+                <figcaption>Video</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./10-Scroll/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/ScrollPro.png" alt="" class="img-fun" />
+
+                <figcaption>Scroll</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./11-Tabs/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/tabspro.png" alt="" class="img-fun" />
+
+                <figcaption>Tabs</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./12-CountDown/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/ct.png" alt="" class="img-fun" />
+
+                <figcaption>Coutdown</figcaption>
+              </a>
+            </figure>
+            <figure class="card">
+              <a
+                href="./14- Grocery Bud/index.html"
+                class="work1-link"
+                target=" "
+                rel="noopener noreferrer"
+              >
+                <img src="./image/gb.png" alt="" class="img-fun" />
+
+                <figcaption>Grocery Bud</figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <div class="placeholder-content"></div>
+    <!-- footer -->
+    <footer>
+      <div class="footer-content">
+        <h3>Contact ME</h3>
+        <p>
+          Thank you for visiting my website! If you'd like to get in touch, feel
+          free to reach out to me via LinkedIn or email. I welcome any
+          inquiries, feedback, or collaboration opportunities. Looking forward
+          to connecting with you!
+        </p>
+        <ul class="socials">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/snehil-dwivedi-"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:snehildwivedi03@gmail.com">
+              <i class="far fas fa-envelope-open"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>Made With <i class="fas fa-heart" id="love"></i> by Snehil</p>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

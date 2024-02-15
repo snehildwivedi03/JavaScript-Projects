@@ -1,4 +1,4 @@
-.card {
+.card-fea {
   position: relative;
   width: 300px;
   height: 300px;
@@ -10,16 +10,10 @@
   overflow: hidden;
   perspective: 1000px;
   box-shadow: 0 0 0 5px #3dd1e7;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover {
+.card-fea:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
@@ -34,12 +28,12 @@
   box-sizing: border-box;
   background-color: #f2f2f2;
   transform: rotateX(-90deg);
-  font-family: "Mukta", sans-serif;
+
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover .card__content {
+.card-fea:hover .card__content {
   transform: rotateX(0deg);
 }
 
@@ -48,17 +42,16 @@
   font-size: 24px;
   color: #333;
   font-weight: 700;
-  font-family: "Mukta", sans-serif;
 }
 
-.card:hover svg {
+.card-fea:hover svg {
   scale: 0;
 }
 
 .card__description {
   margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
+  font-size: 16px;
+  color: #616161;
   line-height: 1.4;
 }
 
@@ -68,11 +61,10 @@
   position: relative;
   width: 300px;
   height: 300px;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -92,7 +84,7 @@
   box-sizing: border-box;
   background-color: #fff;
   opacity: 0;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .oops-card:hover .oops-card-content {
@@ -109,7 +101,7 @@
 
 .oops-cards-des {
   margin: 10px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
   line-height: 1.4;
 }
@@ -125,13 +117,12 @@
   position: relative;
   width: 300px;
   height: 300px;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
   border-radius: 10px;
   display: flex;
-  align-items: center;
+
   justify-content: center;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .api-card:hover {
@@ -166,7 +157,7 @@
 
 .api-cards-des {
   margin: 10px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
   line-height: 1.4;
 }
@@ -175,3 +166,110 @@
   scale: 0;
   transform: rotate(-45deg);
 }
+
+/* Body */
+body {
+  background: #d9ecfd;
+  font-family: "Alegreya Sans";
+}
+
+/* fun with javascript cards */
+/* Cards */
+.wrapper {
+  padding: 15px;
+  display: flex;
+  padding-left: 60px;
+}
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cards .card {
+  position: relative;
+  margin: 20px;
+  width: 230px;
+  height: 270px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+
+.cards .card img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.cards .card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  color: #323232;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+.cards .card:nth-child(8) figcaption {
+  color: #f0f0f0;
+}
+.cards .card:nth-child(9) figcaption {
+  color: #f0f0f0;
+}
+
+.cards .card:hover,
+.cards .card:focus,
+.cards .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+
+.cards .card:hover figcaption,
+.cards .card:focus figcaption,
+.cards .card:active figcaption {
+  transform: none;
+}
+
+.cards .card:hover:after,
+.cards .card:focus:after,
+.cards .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 100px;
+}
+
+.cards .card {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex: 1 0 calc(25% - 10px);
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  border: 5px solid #3dd1e7;
+  margin: 5px;
+}
+.wrapper {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+}
+/* .card {
+  flex: 1 0 calc(25% - 10px);
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  border: 5px solid #3dd1e7;
+  margin: 5px;
+} */

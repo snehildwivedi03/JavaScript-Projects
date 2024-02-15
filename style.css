@@ -6,6 +6,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #d9ecfd;
+  box-sizing: border-box;
 }
 
 .section-top {
@@ -62,7 +64,6 @@ body {
 }
 
 .animated-item {
-  font-family: "Mukta", sans-serif;
   color: rgb(30, 0, 119);
   font-size: 50px;
   line-height: inherit;
@@ -99,7 +100,6 @@ body {
   }
 }
 .section-heading {
-  font-family: "Mukta", sans-serif;
   font-size: 50px;
   white-space: nowrap;
   position: relative;
@@ -109,11 +109,15 @@ body {
 }
 
 .desc-para {
-  font-family: "Mukta", sans-serif;
   position: relative;
   top: 120px;
   left: 150px;
   font-size: 20px;
+}
+.desc-work-pts {
+  position: relative;
+  right: 30px;
+  top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -129,7 +133,6 @@ body {
   justify-content: center;
   top: 40px;
   font-size: 40px;
-  font-family: "Mukta", sans-serif;
 }
 .title-underline {
   position: relative;
@@ -145,7 +148,15 @@ body {
   position: relative;
   height: 750px;
   bottom: 40px;
-  background-color: #cccccc;
+  background-color: #d9ecfd;
+}
+.oops-projects {
+  height: 880px;
+  background-color: #d9ecfd;
+}
+.api-projects {
+  height: 880px;
+  background-color: #d9ecfd;
 }
 .container {
   position: relative;
@@ -154,5 +165,171 @@ body {
   top: 110px;
 }
 .desc-work {
-  margin-right: 50px;
+  margin-right: 100px;
+  right: 100px;
+}
+.work1-link {
+  text-decoration: none;
+}
+.name1 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 60px;
+  color: black;
+}
+
+.name2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 70px;
+  color: black;
+}
+.name3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 70px;
+  color: black;
+}
+.name4 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 90px;
+  color: black;
+}
+.oopname1 {
+  position: absolute;
+  top: 344px;
+  left: 230px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.oopname2 {
+  position: absolute;
+  top: 344px;
+  left: 750px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.oopname3 {
+  position: absolute;
+  top: 727px;
+  left: 218px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.oopname4 {
+  position: absolute;
+  left: 760px;
+  top: 727px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.apiname1 {
+  position: absolute;
+  top: 345px;
+  left: 1065px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.apiname2 {
+  position: absolute;
+  top: 345px;
+  left: 805px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.apiname3 {
+  position: absolute;
+  top: 730px;
+  left: 315px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.apiname4 {
+  position: absolute;
+  top: 730px;
+  left: 795px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.other-works-info {
+  position: relative;
+  height: 750px;
+  bottom: 180px;
+  background-color: #d9ecfd;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+#love {
+  color: red;
+  font-size: 1.3rem;
+}
+footer {
+  background: #9edfff;
+  height: auto;
+  width: 1904px;
+  padding-top: 40px;
+  color: rgb(0, 0, 0);
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  text-decoration: underline;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px;
+  line-height: 28px;
+  font-size: 16px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 0;
+  margin: 1rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: black;
+}
+.socials a i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.socials a:hover i {
+  color: brown;
+}
+.footer-bottom {
+  /* width: 480vh; */
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
 }

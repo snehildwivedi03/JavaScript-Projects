@@ -4,7 +4,7 @@
 }
 
 .oops-project-container {
-  background-color: #a2a2a2;
+  background-color: #d9ecfd;
   height: 800px;
   display: flex;
   flex-direction: row;
@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding-left: 200px;
+  padding-left: 120px;
   padding-top: 55px;
   justify-content: space-evenly;
 }
@@ -46,7 +46,7 @@
   position: relative;
   border-radius: 30px;
   top: -48px;
-  right: 80px;
+  right: 90px;
   height: 0.3rem;
   width: 12rem;
   background: #3dd1e7;
@@ -54,7 +54,7 @@
 }
 
 .api-project-container {
-  background-color: #f2f2f2;
+  background-color: #d9ecfd;
   height: 800px;
   display: flex;
   flex-direction: row;
@@ -65,7 +65,7 @@
   position: relative;
   border-radius: 30px;
   top: -50px;
-  left: -30px;
+  left: -15px;
   height: 0.3rem;
   width: 12rem;
   background: #3dd1e7;
@@ -90,7 +90,7 @@
   flex: 0.4;
 
   font-family: "Mukta", sans-serif;
-  padding-left: 50px;
+  padding-left: 130px;
   padding-top: 20px;
 }
 .api-title {
@@ -101,7 +101,9 @@
 }
 .desc-work {
   font-size: 20px;
+  padding-left: 40px;
 }
 .desc-work-pts {
   font-size: 20px;
+  padding-left: 90px;
 }
