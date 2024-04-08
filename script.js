@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var resumeButton = document.getElementById("resumebtn");
   resumeButton.addEventListener("click", function () {
-    window.open("./image/myresume.pdf", " ");
+    window.open("./image/Snehil_Dwivedi_Intern.pdf", " ");
   });
 });
 
