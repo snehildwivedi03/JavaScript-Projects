@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snehil's Javascript Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Context-Right-Click-Menu -->
+    <ul id="desktop-context-menu" class="context-menu">
+      <li>Create New Folder</li>
+      <li>Change Wallpaper</li>
+      <li>Refresh</li>
+      <li>Open Terminal</li>
+      <li>Change OS</li>
+    </ul>
+    <!--End Context-Right-Click-Menu -->
+    <!-- Start of Loading bar -->
+    <div id="loading-screen">
+      <div class="loading-bar"></div>
+    </div>
+    <!-- End of Loading Bar -->
+
+    <!-- Start of Floadting shapes background -->
+    <ul class="floating-shapes">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!--End of Floadting shapes background -->
+
+    <!-- Start OS Modal Selection  -->
+    <div id="os-modal-popup">
+      <div class="modal-box">
+        <h2>Please select your Operating System</h2>
+        <div class="os-buttons">
+          <button class="os-btn" data-os="windows">
+            <i class="fa-brands fa-windows os-icons"></i> Windows
+          </button>
+          <button class="os-btn" data-os="linux">
+            <i class="fa-brands fa-linux os-icons"></i> Linux
+          </button>
+          <button class="os-btn" data-os="macos">
+            <i class="fa-brands fa-apple os-icons"></i> macOS
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End - OS-Modal -->
+
+    <!--OS-Specific Loading After Selection -->
+    <div id="os-loader">
+      <div id="os-logo"></div>
+      <div class="os-loading-bar">
+        <div class="os-loading-fill"></div>
+      </div>
+    </div>
+    <!-- End of OS Specific Loading After Selection -->
+
+    <!-- Start Windows theme -->
+    <div id="desktop" class="windows-theme">
+      <!-- 📌 Top-left System Info -->
+      <!-- <div id="system-info-box">
+        <p>OS: Windows 11</p>
+        <p>Model: Your Device</p>
+        <p>RAM: 8 GB</p>
+        <p>CPU: Intel i5</p>
+      </div> -->
+
+      <!-- 🖥️ Desktop Icons -->
+      <div class="desktop-icons" tabindex="0">
+        <div class="icon" id="folder-icon">
+          <img src="assets/icons/windows-folder.svg" alt="Projects" />
+          <span>Projects</span>
+        </div>
+        <div class="icon" id="chrome-icon">
+          <img src="assets/icons/chrome.svg" alt="Chrome" />
+          <span>Chrome</span>
+        </div>
+        <div class="icon" id="terminal-icon">
+          <img src="assets/icons/windows-terminal.svg" alt="Terminal" />
+          <span>Terminal</span>
+        </div>
+        <div class="icon" id="recyclebin-icon">
+          <img src="assets/icons/Recycle.png" alt="Recycle-Bin" />
+          <span>Recycle Bin</span>
+        </div>
+        <a href="./assets/project-tumbnails/temp-resume.pdf" target="_blank">
+          <div class="icon" id="pdf-icon">
+            <img src="assets/icons/pdf.png" alt="PDF" />
+            <span>Resume</span>
+          </div>
+        </a>
+        <div class="icon" id="pdf-icon">
+          <img src="assets/icons/thispc.png" alt="ThisPC" />
+          <span>This PC</span>
+        </div>
+      </div>
+
+      <!-- 🪟 Start Menu & Taskbar -->
+
+      <!-- 🟦 Taskbar -->
+      <div class="taskbar">
+        <!-- 🌥️ Leftmost: Weather -->
+        <a href="../0-Weather-App/index.html" target="_blank">
+          <div class="taskbar-left-extreme">
+            <img src="assets/icons/wether.png" alt="Cloud" />
+            <div class="weather-text">
+              <div>26°C</div>
+              <div>Mostly Cloudy</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 🔁 Wrapper for centered + side icons -->
+
+        <div class="taskbar-main">
+          <!-- 👈 Left of center icons -->
+          <div class="taskbar-left-side">
+            <img src="assets/icons/chrome.svg" class="icon-size" alt="Chrome" />
+            <img src="assets/icons/thispc.png" class="icon-size" alt="ThisPC" />
+            <a href="./index.html">
+              <img
+                src="assets/icons/switchOS.png"
+                class="icon-size"
+                alt="Switch"
+              />
+            </a>
+          </div>
+
+          <!-- 🪟 Centered Windows Button -->
+          <div class="taskbar-center">
+            <button id="start-button">
+              <img src="assets/icons/windows-start.svg" alt="Start" />
+            </button>
+          </div>
+
+          <!-- 👉 Right of center icons -->
+          <div class="taskbar-right-side">
+            <img
+              src="assets/icons/music-player.png"
+              class="icon-size"
+              alt="Music"
+            />
+            <a href="../17-Gallery/index.html" target="_blank">
+              <img
+                src="assets/icons/gallery.png"
+                class="icon-size"
+                alt="Photos"
+              />
+            </a>
+            <a
+              href="./assets/project-tumbnails/temp-resume.pdf"
+              target="_blank"
+            >
+              <img src="assets/icons/pdf.png" class="icon-size" alt="PDF" />
+            </a>
+          </div>
+        </div>
+
+        <!-- 🕒 Rightmost System Info -->
+        <div class="taskbar-right-extreme">
+          <i class="fas fa-wifi"></i>
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <div id="clock">10:47 AM</div>
+          <div id="date">16-10-2024</div>
+        </div>
+      </div>
+
+      <!-- End of taskbar -->
+
+      <!-- 🪟 Start Menu (Centered) -->
+      <div class="center">
+        <div class="startmenu" id="start-menu">
+          <div class="sTop">
+            <div class="pinnedlabel">
+              <!-- Shows the text "Pinned" -->
+              Pinned
+            </div>
+            <div class="allapps">
+              <i class="fas fa-search search-icon-menu" id="search-toggle"></i>
+
+              <div class="search-wrapper">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Type to search..."
+                  class="search-input"
+                />
+                <i class="fas fa-times close-icon" id="search-close"></i>
+              </div>
+            </div>
+          </div>
+          <div class="sAppscontainer">
+            <div class="sApps">
+              <div class="starticons">
+                <img src="assets/icons/chrome.svg" />
+                <p class="startlabels" align="center">Chrome</p>
+              </div>
+
+              <div class="starticons">
+                <img src="assets/icons/pdf.png" alt="PDF" />
+                <p class="startlabels" align="center">Resume</p>
+              </div>
+
+              <div class="starticons">
+                <img src="assets/icons/windows-terminal.svg" alt="Terminal" />
+                <p class="startlabels" align="center">Terminal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of start menu content -->
+
+      <!--Start Folder strucutre -->
+      <!-- 📁 Folder Window -->
+      <div class="folder-window" id="folder-window">
+        <!-- 🔷 Top Bar -->
+        <div class="folder-header">
+          <span class="folder-title">Projects</span>
+          <div class="window-controls">
+            <i class="fas fa-window-minimize minimize-btn"></i>
+            <i class="fas fa-window-maximize maximize-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+          </div>
+        </div>
+
+        <!-- 📑 Body -->
+        <div class="folder-body">
+          <!-- 📁 Sidebar -->
+          <div class="folder-sidebar">
+            <ul>
+              <!-- <li>📁 Desktop</li> -->
+              <li>
+                <i class="fas fa-laptop"></i>
+                Desktop
+              </li>
+              <li>
+                <i class="fas fa-download"></i>
+                Downloads
+              </li>
+              <li>
+                <i class="far fa-file-pdf"></i>
+                Documents
+              </li>
+              <li>
+                <i class="fas fa-photo-video"></i>
+                Pictures
+              </li>
+              <li>
+                <i class="fas fa-music"></i>
+                Music
+              </li>
+              <li>
+                <i class="fa-solid fa-video"></i>
+                Videos
+              </li>
+            </ul>
+          </div>
+
+          <!-- 📂 Main Area -->
+          <div class="folder-main">
+            <div class="folder-grid">
+              <a href="../01-ColorFlipper/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>01-ColorFlipper</p>
+                </div>
+              </a>
+              <a href="../02-Counter/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>02-Counter</p>
+                </div>
+              </a>
+              <a href="../03-Reviews/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>03-Reviews</p>
+                </div>
+              </a>
+              <a href="../04-Navbar/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>04-Navbar</p>
+                </div>
+              </a>
+              <a href="../05-Sidebar/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>05-Sidebar</p>
+                </div>
+              </a>
+              <a href="../06-Modal/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>06-Modal</p>
+                </div>
+              </a>
+              <a href="../07-Questions/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>07-Questions</p>
+                </div>
+              </a>
+              <a href="../08-Menu/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>08-Menu</p>
+                </div>
+              </a>
+              <a href="../09-Video/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>09-Video</p>
+                </div>
+              </a>
+              <a href="../10-Scroll/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>10-Scroll</p>
+                </div>
+              </a>
+              <a href="../11-Tabs/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>11-Tabs</p>
+                </div>
+              </a>
+              <a href="../12-CountDown/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>12-CountDown</p>
+                </div>
+              </a>
+              <a href="../13-Lorem Ispum/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>13-Lorem</p>
+                </div>
+              </a>
+              <a href="../14-Grocery-Bud/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>14-Grocery-Bud</p>
+                </div>
+              </a>
+              <a href="../15-Slider/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>15-Slider</p>
+                </div>
+              </a>
+              <a href="../16-Counter-OOP/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>16-Counter-OOP</p>
+                </div>
+              </a>
+              <a href="../17-Gallery/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>17-Gallery</p>
+                </div>
+              </a>
+              <a href="../18-Numbers/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>18-Numbers</p>
+                </div>
+              </a>
+              <a href="../19-DarkMode/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>19-DarkMode</p>
+                </div>
+              </a>
+              <a href="../20-Filters/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>20-Filters</p>
+                </div>
+              </a>
+              <a href="../21-Dad Jokes/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>21-Dad</p>
+                </div>
+              </a>
+              <a href="../22-Products/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>22-Products</p>
+                </div>
+              </a>
+              <a href="../23-Random-User/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>23-Random-User</p>
+                </div>
+              </a>
+              <a href="../24-Cocktails/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>24-Cocktails</p>
+                </div>
+              </a>
+              <a href="../25-Slider-ES6/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>25-Slider-ES6</p>
+                </div>
+              </a>
+              <a href="../26-Stripe-SubMenu/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>26-Stripe-SubMenu</p>
+                </div>
+              </a>
+              <a href="../27-Pagination/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>27-Pagination</p>
+                </div>
+              </a>
+              <a href="../28-Wiki-API/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>28-Wiki-API</p>
+                </div>
+              </a>
+              <a href="../29-CapstoneProject- Comfy/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>29-CapstoneProject-</p>
+                </div>
+              </a>
+              <!-- Repeat more folder/images -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End folder structure -->
+    </div>
+
+    <!-- End of windows theme -->
+  </body>
+  <script src="script.js"></script>
+  <script src="./files/context-menu.js"></script>
+</html>

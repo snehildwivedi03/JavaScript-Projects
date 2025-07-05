@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* optional: prevents default blue link color */
+}
+
+a * {
+  text-decoration: none;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+/* Loading bar */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 5px;
+  background-color: #00ff88;
+  animation: load 2.5s forwards;
+}
+
+@keyframes load {
+  to {
+    width: 80%;
+  }
+}
+/* Modal styling */
+#os-modal-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* 🧱 Inner box */
+.modal-box {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Heading */
+.modal-box h2 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 1.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Buttons container */
+.os-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.os-buttons i {
+  font-size: 24px;
+}
+
+/* Buttons */
+.os-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #2a2a2a;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.os-btn:hover {
+  background-color: #3d3d3d;
+  border-color: #888;
+}
+#os-modal-popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+/* End of modal styling  */
+
+/* Start of shapes background  */
+.floating-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
+  list-style: none;
+}
+
+.floating-shapes li {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 11, 12);
+  animation: floatUp 10s linear infinite;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Random positions and delays */
+.floating-shapes li:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.floating-shapes li:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+.floating-shapes li:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+.floating-shapes li:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+.floating-shapes li:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.2);
+    opacity: 0;
+  }
+}
+/* End of background  */
+
+/* OS-Specific Loader (Second Loader After OS Selection) */
+#os-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  gap: 2rem;
+}
+
+#os-logo i {
+  font-size: 4rem;
+  color: white;
+}
+
+.os-loading-bar {
+  width: 60%;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.os-loading-fill {
+  height: 100%;
+  width: 0;
+  background-color: #00ff88; /* default color, can be overridden in JS */
+  animation: osLoad 2.5s forwards;
+  border-radius: 5px;
+}
+
+@keyframes osLoad {
+  100% {
+    width: 100%;
+  }
+}
+/* End of second loader after selection */
+
+/*Start Windows theme */
+.windows-theme {
+  background-image: url("assets/wallpapers/windows-home.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: none; /* still hidden initially, shown after OS loader */
+  position: relative;
+  overflow: hidden;
+}
+/* End widows theme */
+/* 📌 System Info Box */
+#system-info-box {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  z-index: 10;
+  line-height: 1.4;
+}
+
+/* 🖼 Desktop Icons */
+.desktop-icons {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  width: 64px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+.icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.4rem;
+}
+
+/* 🟦 Taskbar */
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(146, 146, 146, 0.439);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  backdrop-filter: blur(20px);
+  z-index: 10000;
+}
+
+/* Extreme left */
+.taskbar-left-extreme {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.taskbar-left-extreme img {
+  width: 24px;
+}
+.weather-text {
+  font-size: 16px;
+  color: white;
+  line-height: 1.1;
+}
+
+/* Main icon wrapper (left icons + center + right icons) */
+.taskbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+}
+
+/* Left side of center */
+.taskbar-left-side,
+.taskbar-right-side {
+  display: flex;
+  gap: 20px;
+}
+
+/* Center Windows button */
+.taskbar-center button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.taskbar-center img {
+  width: 32px;
+}
+
+/* Rightmost time + network */
+.taskbar-right-extreme {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.taskbar-right-extreme img {
+  width: 24px;
+}
+#clock,
+#date {
+  color: white;
+  font-size: 14px;
+  font-family: monospace;
+}
+/* Generic taskbar icon (applies to all) */
+.icon-size {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Optional: Subtle hover effect */
+.icon-size:hover {
+  transform: scale(1.1);
+}
+
+/* 📂 Start Menu */
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.startmenu {
+  position: absolute;
+  bottom: 55px;
+  width: 625px;
+  height: 90%;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  z-index: 11000;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* When active (shown) */
+.startmenu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Optional: subtle fade-in animation */
+@keyframes fadeInStart {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sTop {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pinnedlabel {
+  margin-top: -5px;
+  margin-left: 45px;
+}
+
+.allapps {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 45px;
+  position: relative;
+}
+
+.search-icon-menu {
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.search-icon-menu:hover {
+  color: #000;
+}
+
+#search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  opacity: 0;
+  width: 0px;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+/* When input is active */
+#search-input.active {
+  opacity: 1;
+  width: 160px;
+  pointer-events: auto;
+}
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#search-input {
+  opacity: 0;
+  width: 0px;
+  pointer-events: none;
+  padding: 6px 0;
+  border: none;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  color: #000;
+  font-size: 14px;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+}
+
+#search-input.active {
+  opacity: 1;
+  width: 160px;
+  pointer-events: auto;
+  padding: 6px 8px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.close-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#search-input.active + .close-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sAppscontainer {
+  /*centers the icons with a display:grid */
+  display: grid;
+  justify-items: center;
+}
+
+.sApps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Up to 6 icons per row */
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.starticons {
+  width: 80px;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.starticons img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 30px;
+}
+
+.starticons:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+.context-menu {
+  position: absolute;
+  z-index: 99999;
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 8px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  min-width: 180px;
+  font-size: 14px;
+}
+.context-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.context-menu li:hover {
+  background: #dbe4f0;
+}
+.folder-window {
+  display: none; /* Hidden by default */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 100px; /* adjust as per your design */
+  left: 150px;
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 12000;
+  overflow: hidden;
+}
+
+/* Active state (visible with animation) */
+.folder-window.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.folder-header {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Close Button */
+.folder-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Body */
+.folder-body {
+  display: flex;
+  height: 100%;
+}
+
+/* Sidebar */
+.folder-sidebar {
+  width: 180px;
+  background: #fafafa;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.folder-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.folder-sidebar li {
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.folder-main {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.folder-item {
+  text-align: center;
+  font-size: 13px;
+}
+
+.folder-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.window-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.window-controls i {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.window-controls i:hover {
+  background-color: #ddd;
+}
+.folder-window.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+}
