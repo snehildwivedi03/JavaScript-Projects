@@ -18,13 +18,13 @@
   </head>
   <body>
     <!-- Start Context-Right-Click-Menu -->
-    <ul id="desktop-context-menu" class="context-menu">
+    <!-- <ul id="desktop-context-menu" class="context-menu">
       <li>Create New Folder</li>
       <li>Change Wallpaper</li>
       <li>Refresh</li>
       <li>Open Terminal</li>
       <li>Change OS</li>
-    </ul>
+    </ul> -->
     <!--End Context-Right-Click-Menu -->
     <!-- Start of Loading bar -->
     <div id="loading-screen">
@@ -82,29 +82,37 @@
 
       <!-- 🖥️ Desktop Icons -->
       <div class="desktop-icons" tabindex="0">
-        <div class="icon" id="folder-icon">
+        <div class="icon" id="folder-icon" data-app="folder" tabindex="0">
           <img src="assets/icons/windows-folder.svg" alt="Projects" />
           <span>Projects</span>
         </div>
-        <div class="icon" id="chrome-icon">
+
+        <div class="icon" id="chrome-icon" data-app="chrome" tabindex="0">
           <img src="assets/icons/chrome.svg" alt="Chrome" />
           <span>Chrome</span>
         </div>
-        <div class="icon" id="terminal-icon">
+
+        <div class="icon" id="terminal-icon" data-app="terminal" tabindex="0">
           <img src="assets/icons/windows-terminal.svg" alt="Terminal" />
           <span>Terminal</span>
         </div>
-        <div class="icon" id="recyclebin-icon">
+
+        <div
+          class="icon"
+          id="recyclebin-icon"
+          data-app="recyclebin"
+          tabindex="0"
+        >
           <img src="assets/icons/Recycle.png" alt="Recycle-Bin" />
           <span>Recycle Bin</span>
         </div>
-        <a href="./assets/project-tumbnails/temp-resume.pdf" target="_blank">
-          <div class="icon" id="pdf-icon">
-            <img src="assets/icons/pdf.png" alt="PDF" />
-            <span>Resume</span>
-          </div>
-        </a>
-        <div class="icon" id="pdf-icon">
+
+        <div class="icon" id="pdf-icon" data-app="resume" tabindex="0">
+          <img src="assets/icons/pdf.png" alt="PDF" />
+          <span>Resume</span>
+        </div>
+
+        <div class="icon" id="thispc-icon" data-app="thispc" tabindex="0">
           <img src="assets/icons/thispc.png" alt="ThisPC" />
           <span>This PC</span>
         </div>
@@ -129,6 +137,15 @@
 
         <div class="taskbar-main">
           <!-- 👈 Left of center icons -->
+          <!-- 🔳 Dynamic taskbar icon for active folder -->
+          <!-- <div
+            id="taskbar-folder-icon"
+            class="taskbar-icon"
+            style="display: none"
+          >
+            <img src="assets/icons/windows-folder.svg" alt="Folder" />
+          </div> -->
+
           <div class="taskbar-left-side">
             <img src="assets/icons/chrome.svg" class="icon-size" alt="Chrome" />
             <img src="assets/icons/thispc.png" class="icon-size" alt="ThisPC" />
@@ -168,6 +185,14 @@
             >
               <img src="assets/icons/pdf.png" class="icon-size" alt="PDF" />
             </a>
+            <!-- Dynamic folder taskbar icon shown when open -->
+            <div
+              id="taskbar-folder-icon"
+              class="taskbar-icon"
+              style="display: none"
+            >
+              <img src="assets/icons/windows-folder.svg" alt="Folder" />
+            </div>
           </div>
         </div>
 
@@ -461,6 +486,5 @@
 
     <!-- End of windows theme -->
   </body>
-  <script src="script.js"></script>
-  <script src="./files/context-menu.js"></script>
+  <script src="./scripts.js"></script>
 </html>

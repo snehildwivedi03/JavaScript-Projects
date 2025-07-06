@@ -71,7 +71,7 @@ body {
   font-size: 18px;
   color: white;
   margin-bottom: 1.5rem;
-  pointer-events: none;
+
   user-select: none;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 #os-modal-popup {
   opacity: 0;
-  pointer-events: none;
+
   transition: opacity 0.5s ease-in-out;
 }
 /* End of modal styling  */
@@ -249,6 +249,7 @@ body {
   gap: 2rem;
 }
 
+/* Each icon */
 .icon {
   display: flex;
   flex-direction: column;
@@ -257,15 +258,28 @@ body {
   cursor: pointer;
   width: 64px;
   text-align: center;
-  transition: transform 0.2s ease;
+  padding: 6px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  outline: none;
 }
+
+/* Hover effect */
 .icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+/* Image inside icon */
 .icon img {
   width: 48px;
   height: 48px;
   margin-bottom: 0.4rem;
+}
+
+/* Highlight on selection */
+.icon.selected,
+.icon:focus {
+  background-color: rgba(0, 120, 215, 0.3); /* light blue background */
 }
 
 /* 🟦 Taskbar */
@@ -280,7 +294,7 @@ body {
   align-items: center;
   padding: 0 10px;
   backdrop-filter: blur(20px);
-  z-index: 10000;
+  z-index: 20000;
 }
 
 /* Extreme left */
@@ -368,13 +382,13 @@ body {
   width: 625px;
   height: 90%;
   backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(211, 211, 211, 0.8);
   border-radius: 12px;
-  z-index: 11000;
+  z-index: 20000;
   padding: 1.5rem;
   opacity: 0;
   transform: translateY(10px);
-  pointer-events: none;
+
   transition: all 0.3s ease;
 }
 
@@ -436,7 +450,7 @@ body {
   font-size: 14px;
   opacity: 0;
   width: 0px;
-  pointer-events: none;
+
   transition: all 0.4s ease;
 }
 
@@ -454,7 +468,7 @@ body {
 #search-input {
   opacity: 0;
   width: 0px;
-  pointer-events: none;
+
   padding: 6px 0;
   border: none;
   transition: all 0.4s ease;
@@ -485,7 +499,6 @@ body {
   color: #666;
   opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 
 #search-input.active + .close-icon {
@@ -560,6 +573,13 @@ body {
   border-radius: 10px;
   z-index: 12000;
   overflow: hidden;
+}
+.folder-window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  transition: top 0.2s ease, left 0.2s ease; /* optional smooth stop */
+  z-index: 1000;
 }
 
 /* Active state (visible with animation) */
@@ -653,9 +673,31 @@ body {
   background-color: #ddd;
 }
 .folder-window.fullscreen {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  border-radius: 0;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transition: all 0.4s ease;
+}
+.taskbar-icon {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskbar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.taskbar-icon:hover,
+.taskbar-icon.active {
+  background-color: rgba(227, 227, 227, 0.2);
 }
