@@ -242,3 +242,43 @@ function openApp(appName) {
     setTimeout(() => appWindow.classList.add("active"), 10);
   }
 }
+// 📦 Dragging Logic for folder window
+const folderHeader = document.querySelector(".folder-header");
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+folderHeader?.addEventListener("mousedown", (e) => {
+  // Don't allow drag in fullscreen
+  if (appFolderWindow.classList.contains("fullscreen")) return;
+
+  isDragging = true;
+  const rect = appFolderWindow.getBoundingClientRect();
+  offsetX = e.clientX - rect.left;
+  offsetY = e.clientY - rect.top;
+
+  document.body.style.userSelect = "none"; // Prevent text selection
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  // Limit within screen boundaries
+  let left = e.clientX - offsetX;
+  let top = e.clientY - offsetY;
+
+  const maxLeft = window.innerWidth - appFolderWindow.offsetWidth;
+  const maxTop = window.innerHeight - appFolderWindow.offsetHeight - 50; // 50 = taskbar height
+
+  left = Math.max(0, Math.min(left, maxLeft));
+  top = Math.max(0, Math.min(top, maxTop));
+
+  appFolderWindow.style.left = `${left}px`;
+  appFolderWindow.style.top = `${top}px`;
+  appFolderWindow.style.position = "absolute";
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  document.body.style.userSelect = "auto";
+});
