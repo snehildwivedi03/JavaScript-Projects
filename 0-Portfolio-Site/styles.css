@@ -384,10 +384,12 @@ body {
   backdrop-filter: blur(20px);
   background-color: rgba(211, 211, 211, 0.8);
   border-radius: 12px;
-  z-index: 20000;
+  z-index: 0; /* 🔧 Default hidden */
   padding: 1.5rem;
+
   opacity: 0;
   transform: translateY(10px);
+  pointer-events: none; /* 🔧 Prevent clicking when hidden */
 
   transition: all 0.3s ease;
 }
@@ -396,6 +398,7 @@ body {
 .startmenu.show {
   opacity: 1;
   transform: translateY(0);
+  z-index: 20000; /* Optional: moved to JS for control */
   pointer-events: auto;
 }
 

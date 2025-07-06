@@ -27,6 +27,7 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
     const osLogo = document.getElementById("os-logo");
     const loadingFill = document.querySelector(".os-loading-fill");
 
+    // Set logo and color
     if (os === "windows") {
       osLogo.innerHTML = '<i class="fa-brands fa-windows"></i>';
       loadingFill.style.backgroundColor = "#0078d7";
@@ -39,7 +40,9 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
       loadingFill.style.backgroundColor = "#ffffff";
     }
 
+    // Show loader
     osLoader.style.display = "flex";
+
     setTimeout(() => {
       osLoader.style.display = "none";
       document.getElementById("desktop").style.display = "block";
@@ -50,16 +53,56 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
 // --------------------
 // 🪟 Start Menu Toggle
 // --------------------
-const startBtn = document.getElementById("start-button");
-const startMenu = document.getElementById("start-menu");
+// 🧠 Open App by ID
+function openApp(appName) {
+  if (!appName) return;
+  const appWindow = document.getElementById(`${appName}-window`);
+  if (appWindow) {
+    appWindow.style.display = "block";
+    setTimeout(() => appWindow.classList.add("active"), 10);
+  }
+}
+const desktopStartButton = document.getElementById("start-button");
+const systemStartMenu = document.getElementById("start-menu");
 
-startBtn.addEventListener("click", (e) => {
+desktopStartButton.addEventListener("click", (e) => {
   e.stopPropagation();
-  startMenu.classList.toggle("show");
+
+  const isMenuVisible = systemStartMenu.classList.contains("show");
+
+  if (!isMenuVisible) {
+    systemStartMenu.classList.add("show");
+    systemStartMenu.style.opacity = "1";
+    systemStartMenu.style.transform = "translateY(0)";
+    systemStartMenu.style.zIndex = "20000";
+  } else {
+    systemStartMenu.classList.remove("show");
+    systemStartMenu.style.opacity = "0";
+    systemStartMenu.style.transform = "translateY(10px)";
+    setTimeout(() => {
+      if (!systemStartMenu.classList.contains("show")) {
+        systemStartMenu.style.zIndex = "0";
+      }
+    }, 300); // match transition
+  }
 });
 
-startMenu.addEventListener("click", (e) => e.stopPropagation());
-document.addEventListener("click", () => startMenu.classList.remove("show"));
+// 🧱 Prevent hiding when clicking inside the menu
+systemStartMenu.addEventListener("click", (e) => e.stopPropagation());
+
+// 🌌 Click outside to hide
+document.addEventListener("click", () => {
+  if (systemStartMenu.classList.contains("show")) {
+    systemStartMenu.classList.remove("show");
+    systemStartMenu.style.opacity = "0";
+    systemStartMenu.style.transform = "translateY(10px)";
+    setTimeout(() => {
+      if (!systemStartMenu.classList.contains("show")) {
+        systemStartMenu.style.zIndex = "0";
+      }
+    }, 300);
+  }
+});
 
 // --------------------
 // ⏰ Clock & Date Update
@@ -88,11 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const folderHeader = document.querySelector(".folder-header");
 
   let isMaximized = false;
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
   let prevState = {};
 
+  // 📁 Launch Folder
   function openFolderWindow() {
     folderWindow.style.display = "block";
     setTimeout(() => folderWindow.classList.add("active"), 10);
@@ -100,8 +141,10 @@ document.addEventListener("DOMContentLoaded", () => {
     taskbarIcon.classList.add("active");
   }
 
+  // 🖱️ Double-click to open
   folderIcon?.addEventListener("dblclick", openFolderWindow);
 
+  // ❌ Close button
   closeBtn?.addEventListener("click", () => {
     folderWindow.classList.remove("active");
     setTimeout(() => {
@@ -111,11 +154,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   });
 
+  // ➖ Minimize button
   minimizeBtn?.addEventListener("click", () => {
     folderWindow.style.display = "none";
     taskbarIcon.classList.remove("active");
   });
 
+  // ⛶ Maximize / Restore
   maximizeBtn?.addEventListener("click", () => {
     if (!isMaximized) {
       prevState = {
@@ -129,8 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
       folderWindow.style.position = "fixed";
       folderWindow.style.top = "0";
       folderWindow.style.left = "0";
-      folderWindow.style.width = "100vw";
-      folderWindow.style.height = "100vh";
       isMaximized = true;
     } else {
       folderWindow.classList.remove("fullscreen");
@@ -143,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // 📌 Taskbar Toggle
   taskbarIcon?.addEventListener("click", () => {
     const isVisible = folderWindow.style.display === "block";
     if (isVisible) {
@@ -155,6 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
       openFolderWindow();
     }
   });
+
+  // 🖱️ Drag Folder
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
 
   folderHeader?.addEventListener("mousedown", (e) => {
     if (isMaximized) return;
@@ -178,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     folderWindow.style.left = `${left}px`;
     folderWindow.style.top = `${top}px`;
+
     folderWindow.style.position = "absolute";
   });
 
@@ -186,6 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.userSelect = "auto";
   });
 
+  // 🖼️ Desktop Icon Selection Logic
   const desktopIcons = document.querySelectorAll(".icon");
   let selectedIcon = null;
 
@@ -218,13 +269,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// 🧠 Open App by ID
-function openApp(appName) {
-  if (!appName) return;
-  const appWindow = document.getElementById(`${appName}-window`);
-  if (appWindow) {
-    appWindow.style.display = "block";
-    setTimeout(() => appWindow.classList.add("active"), 10);
-  }
-}
