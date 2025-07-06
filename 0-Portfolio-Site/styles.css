@@ -576,10 +576,17 @@ body {
 }
 .folder-window {
   position: absolute;
-  top: 100px;
   left: 100px;
-  transition: top 0.2s ease, left 0.2s ease; /* optional smooth stop */
-  z-index: 1000;
+  top: 100px;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.folder-window.fullscreen {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: calc(100% - 50px) !important; /* minus taskbar */
+  position: fixed !important;
 }
 
 /* Active state (visible with animation) */

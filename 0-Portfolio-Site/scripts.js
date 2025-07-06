@@ -27,7 +27,6 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
     const osLogo = document.getElementById("os-logo");
     const loadingFill = document.querySelector(".os-loading-fill");
 
-    // Set logo and color
     if (os === "windows") {
       osLogo.innerHTML = '<i class="fa-brands fa-windows"></i>';
       loadingFill.style.backgroundColor = "#0078d7";
@@ -40,9 +39,7 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
       loadingFill.style.backgroundColor = "#ffffff";
     }
 
-    // Show loader
     osLoader.style.display = "flex";
-
     setTimeout(() => {
       osLoader.style.display = "none";
       document.getElementById("desktop").style.display = "block";
@@ -62,10 +59,7 @@ startBtn.addEventListener("click", (e) => {
 });
 
 startMenu.addEventListener("click", (e) => e.stopPropagation());
-
-document.addEventListener("click", () => {
-  startMenu.classList.remove("show");
-});
+document.addEventListener("click", () => startMenu.classList.remove("show"));
 
 // --------------------
 // ⏰ Clock & Date Update
@@ -94,9 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const folderHeader = document.querySelector(".folder-header");
 
   let isMaximized = false;
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
   let prevState = {};
 
-  // 📁 Launch Folder
   function openFolderWindow() {
     folderWindow.style.display = "block";
     setTimeout(() => folderWindow.classList.add("active"), 10);
@@ -104,10 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     taskbarIcon.classList.add("active");
   }
 
-  // 🖱️ Double-click to open
   folderIcon?.addEventListener("dblclick", openFolderWindow);
 
-  // ❌ Close button
   closeBtn?.addEventListener("click", () => {
     folderWindow.classList.remove("active");
     setTimeout(() => {
@@ -117,13 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   });
 
-  // ➖ Minimize button
   minimizeBtn?.addEventListener("click", () => {
     folderWindow.style.display = "none";
     taskbarIcon.classList.remove("active");
   });
 
-  // ⛶ Maximize / Restore
   maximizeBtn?.addEventListener("click", () => {
     if (!isMaximized) {
       prevState = {
@@ -137,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
       folderWindow.style.position = "fixed";
       folderWindow.style.top = "0";
       folderWindow.style.left = "0";
+      folderWindow.style.width = "100vw";
+      folderWindow.style.height = "100vh";
       isMaximized = true;
     } else {
       folderWindow.classList.remove("fullscreen");
@@ -149,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 📌 Taskbar Toggle
   taskbarIcon?.addEventListener("click", () => {
     const isVisible = folderWindow.style.display === "block";
     if (isVisible) {
@@ -162,11 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
       openFolderWindow();
     }
   });
-
-  // 🖱️ Drag Folder
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
 
   folderHeader?.addEventListener("mousedown", (e) => {
     if (isMaximized) return;
@@ -190,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     folderWindow.style.left = `${left}px`;
     folderWindow.style.top = `${top}px`;
-
     folderWindow.style.position = "absolute";
   });
 
@@ -199,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.userSelect = "auto";
   });
 
-  // 🖼️ Desktop Icon Selection Logic
   const desktopIcons = document.querySelectorAll(".icon");
   let selectedIcon = null;
 
@@ -242,43 +228,3 @@ function openApp(appName) {
     setTimeout(() => appWindow.classList.add("active"), 10);
   }
 }
-// 📦 Dragging Logic for folder window
-const folderHeader = document.querySelector(".folder-header");
-let isDragging = false;
-let offsetX = 0;
-let offsetY = 0;
-
-folderHeader?.addEventListener("mousedown", (e) => {
-  // Don't allow drag in fullscreen
-  if (appFolderWindow.classList.contains("fullscreen")) return;
-
-  isDragging = true;
-  const rect = appFolderWindow.getBoundingClientRect();
-  offsetX = e.clientX - rect.left;
-  offsetY = e.clientY - rect.top;
-
-  document.body.style.userSelect = "none"; // Prevent text selection
-});
-
-document.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-
-  // Limit within screen boundaries
-  let left = e.clientX - offsetX;
-  let top = e.clientY - offsetY;
-
-  const maxLeft = window.innerWidth - appFolderWindow.offsetWidth;
-  const maxTop = window.innerHeight - appFolderWindow.offsetHeight - 50; // 50 = taskbar height
-
-  left = Math.max(0, Math.min(left, maxLeft));
-  top = Math.max(0, Math.min(top, maxTop));
-
-  appFolderWindow.style.left = `${left}px`;
-  appFolderWindow.style.top = `${top}px`;
-  appFolderWindow.style.position = "absolute";
-});
-
-document.addEventListener("mouseup", () => {
-  isDragging = false;
-  document.body.style.userSelect = "auto";
-});
