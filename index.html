@@ -1,576 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snehil's | JS | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <style>
-      .placeholder-content {
-        height: 340px;
-      }
-    </style>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section class="section-top">
-      <div class="section-top-info">
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-        <div class="my-image">
-          <img src="./image/myimg.jpeg" class="myimg" alt="" />
-        </div>
-        <!-- background div -->
-        <div class="animated-info">
-          <h1 class="section-heading">Hey folks, I'm</h1>
-          <h2 class="animated-item">Snehil Dwivedi</h2>
-          <h3 class="animated-item">Frontend Developer</h3>
-        </div>
-        <div class="section-para">
-          <p class="desc-para">
-            I've skills in HTML, CSS, and JavaScript. I'm passionate about
-            transforming stunning and interactive<br />
-            websites. Explore my portfolio to see projects where I've seamlessly
-            blended design and functionality. <br />From personal websites to
-            dynamic applications, I bring creativity and technical skill to
-            every project.
-          </p>
-        </div>
-        <button class="button-74" role="button">My Works</button>
-        <button class="button-75" id="resumebtn" role="button">
-          My Resume
-        </button>
-      </div>
-    </section>
+    <!-- Start Context-Right-Click-Menu -->
+    <!-- <ul id="desktop-context-menu" class="context-menu">
+      <li>Create New Folder</li>
+      <li>Change Wallpaper</li>
+      <li>Refresh</li>
+      <li>Open Terminal</li>
+      <li>Change OS</li>
+    </ul> -->
+    <!--End Context-Right-Click-Menu -->
+    <!-- Start of Loading bar -->
+    <div id="loading-screen">
+      <div class="loading-bar"></div>
+    </div>
+    <!-- End of Loading Bar -->
 
-    <article class="my-works">
-      <section class="works-info">
-        <h2 class="featured-works">Featured projects</h2>
-        <div class="title-underline"></div>
-        <div class="container">
-          <div class="work1">
-            <a
-              href="./29-CapstoneProject- Comfy/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <div class="card-fea">
-                <img src="./image/work1.png" alt="" />
-                <div class="card__content">
-                  <p class="card__title">Comfy Store</p>
-                  <p class="card__description">
-                    In my recent project, I've developed a new e-commerce
-                    website. I used HTML, CSS, and JavaScript, including some
-                    advanced ES6 features. By using APIs carefully, I made sure
-                    the site can show dynamic information and work smoothly. The
-                    result is an easy-to-use online store that offers a great
-                    shopping experience.
-                  </p>
-                </div>
-              </div>
-              <p class="name1">E-commerce Store</p>
-            </a>
-          </div>
-          <div class="work2">
-            <a
-              href="./26-Stripe-SubMenu/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <div class="card-fea">
-                <img src="./image/work2.png" alt="" />
-                <div class="card__content">
-                  <p class="card__title">Stripe Sub-Menu</p>
-                  <p class="card__description">
-                    In this project, I created a Stripe submenu using HTML, CSS,
-                    and JavaScript. By implementing basic and advanced
-                    JavaScript techniques, I ensured smooth navigation and
-                    functionality. The result is a user-friendly submenu system
-                    , enhancing the overall user experience.
-                  </p>
-                </div>
-              </div>
-              <p class="name2">Stripe Sub-Menu</p>
-            </a>
-          </div>
-          <div class="work3">
-            <a
-              href="./23-Random-User/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <div class="card-fea">
-                <img src="./image/work3.png" alt="" />
-                <div class="card__content">
-                  <p class="card__title">Random User</p>
-                  <p class="card__description">
-                    In this project, I utilized the Random User API to create a
-                    dynamic application. Using HTML, CSS, and JavaScript, I
-                    crafted a user interface that fetches and displays random
-                    user data. Leveraging the power of APIs, the project offers
-                    an interactive experience, allowing users to explore diverse
-                    profiles with ease.
-                  </p>
-                </div>
-              </div>
-              <p class="name3">Random User API</p>
-            </a>
-          </div>
-          <div class="work4">
-            <a
-              href="./28-Wiki-API/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <div class="card-fea">
-                <img src="./image/work4.png" alt="" />
-                <div class="card__content">
-                  <p class="card__title">Wikipedia-API</p>
-                  <p class="card__description">
-                    In this project, I delved into the Wikipedia API to develop
-                    an informative application. Using HTML, CSS, and JavaScript,
-                    I created a user-friendly interface that fetches and
-                    presents data from Wikipedia articles. By leveraging the
-                    API's capabilities, the project offers a seamless
-                    experience, enabling users to access a wealth of knowledge
-                    effortlessly.
-                  </p>
-                </div>
-              </div>
-              <p class="name4">Wikipedia API</p>
-            </a>
-          </div>
-        </div>
-      </section>
-    </article>
+    <!-- Start of Floadting shapes background -->
+    <ul class="floating-shapes">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!--End of Floadting shapes background -->
 
-    <!-- oops projects -->
-    <section class="oops-projects">
-      <div class="oops-project-container">
-        <div class="oops-card-info">
-          <p class="oopname1">Gallery</p>
-          <div class="oops-card">
-            <a
-              href="./17-Gallery/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/gallery.png" alt="" />
-              <div class="oops-card-content">
-                <p class="oops-card-title">Gallery</p>
-                <p class="oops-cards-des">
-                  In my JavaScript gallery project, I've utilized
-                  Object-Oriented Programming principles to create a dynamic
-                  image gallery. I've crafted modular and interactive features,
-                  resulting in a versatile and user-friendly applicatiom.
-                </p>
-              </div>
-            </a>
-          </div>
-          <p class="oopname2">Dark Mode</p>
-          <div class="oops-card">
-            <a
-              href="./19-DarkMode/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/darkmode.png" alt="" />
-              <div class="oops-card-content">
-                <p class="oops-card-title">Dark Mode</p>
-                <p class="oops-cards-des">
-                  In my dark mode project, I've used JavaScript's OOP principles
-                  to seamlessly toggle between light and dark themes. Through
-                  encapsulation and modular design, I've created a flexible and
-                  user-friendly experience, showcasing my adeptness in OOP and
-                  enhancing user customization.
-                </p>
-              </div>
-            </a>
-          </div>
-          <p class="oopname3">Numbers</p>
-          <p class="oopname4">Counter</p>
-          <div class="oops-card">
-            <a
-              href="./18-Numbers/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/numbers.png" alt="" />
-              <div class="oops-card-content">
-                <p class="oops-card-title">Numbers</p>
-                <p class="oops-cards-des">
-                  In my counting numbers project, I've used JavaScript to create
-                  a dynamic counter. By applying OOP principles, I've developed
-                  a simple yet engaging feature that incrementally displays
-                  numbers. This project showcases my ability to leverage
-                  JavaScript for interactive and visually appealing
-                  functionality.
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="oops-card">
-            <a
-              href="./16-Counter-OOP/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/counteroop.png" alt="" />
-              <div class="oops-card-content">
-                <p class="oops-card-title">Counter</p>
-                <p class="oops-cards-des">
-                  In my counter project, I've utilized JavaScript to create a
-                  dynamic counting feature. Through simple yet effective
-                  programming techniques, I've developed a functional counter
-                  that incrementally displays numbers.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <!-- oops projects description -->
-        <div class="oops-title-info">
-          <h2 class="oops-title">OOPS Projects</h2>
-          <div class="title-underline-oops"></div>
-          <div class="desc-oops-projects">
-            <p class="desc-work">
-              In my JavaScript OOP projects, I've applied key concepts such as
-              encapsulation, inheritance, polymorphism, and abstraction. Through
-              these projects, I've learned to structure code for clarity, reuse
-              hierarchical relationships efficiently, enable flexible behaviors,
-              and simplify complex systems. These experiences have deepened my
-              understanding of JavaScript's OOP paradigm and enhanced my ability
-              to develop scalable and maintainable applications.
-            </p>
-            <ul class="desc-work-pts">
-              <li>I've embraced principles of OOP.</li>
-              <li>
-                These projects have thought me JavaScript's OOP capabilities.
-              </li>
-              <li>
-                I've cultivated proficiency in writing organized code
-                structures.
-              </li>
-            </ul>
-          </div>
+    <!-- Start OS Modal Selection  -->
+    <div id="os-modal-popup">
+      <div class="modal-box">
+        <h2>Please select your Operating System</h2>
+        <div class="os-buttons">
+          <button class="os-btn" data-os="windows">
+            <i class="fa-brands fa-windows os-icons"></i> Windows
+          </button>
+          <button class="os-btn" data-os="linux">
+            <i class="fa-brands fa-linux os-icons"></i> Linux
+          </button>
+          <button class="os-btn" data-os="macos">
+            <i class="fa-brands fa-apple os-icons"></i> macOS
+          </button>
         </div>
       </div>
-    </section>
-    <!-- api projects -->
-    <section class="api-projects">
-      <div class="api-project-container">
-        <div class="api-title-info">
-          <h2 class="api-title">API Projects</h2>
-          <div class="title-underline-api"></div>
-          <div class="desc-api-projects">
-            <p class="desc-work">
-              In my API projects, JavaScript has been instrumental in seamlessly
-              integrating with diverse APIs, enriching web applications with
-              dynamic data. This hands-on experience has honed my skills in
-              handling asynchronous requests and efficiently managing API
-              responses. By incorporating real-time data from external sources,
-              I've elevated user interaction and provided enhanced
-              functionality.<br />
-              Key points include:
-            </p>
-            <ul class="desc-work-pts">
-              <li>Utilizing JavaScript to make HTTP requests.</li>
-              <li>Dynamically updating webpage content with real-time data.</li>
-              <li>Enhancing user interaction by using APIs.</li>
-            </ul>
-          </div>
+    </div>
+    <!-- End - OS-Modal -->
+
+    <!--OS-Specific Loading After Selection -->
+    <div id="os-loader">
+      <div id="os-logo"></div>
+      <div class="os-loading-bar">
+        <div class="os-loading-fill"></div>
+      </div>
+    </div>
+    <!-- End of OS Specific Loading After Selection -->
+
+    <!-- Start Windows theme -->
+    <div id="desktop" class="windows-theme">
+      <!-- 🖥️ Desktop Icons -->
+      <div class="desktop-icons" tabindex="0">
+        <div class="icon" id="folder-icon" data-app="folder" tabindex="0">
+          <img src="assets/icons/windows-folder.svg" alt="Projects" />
+          <span>Projects</span>
         </div>
-        <p class="apiname1">Dad Jokes</p>
-        <div class="api-card-info">
-          <div class="api-card">
-            <a
-              href="./21-Dad Jokes/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/dasjokes.png" alt="" />
-              <div class="oops-card-content">
-                <p class="api-card-title">Dad Jokes</p>
-                <p class="api-cards-des">
-                  In my dad jokes API project, I've utilized JavaScript to fetch
-                  and display jokes from a dedicated API source. Through this
-                  project, I've created a fun and interactive experience for
-                  users, allowing them to access and enjoy a collection of
-                  humorous dad jokes.
-                </p>
-              </div>
-            </a>
-          </div>
-          <p class="apiname2">Product</p>
-          <div class="api-card">
-            <a
-              href="./22-Products/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/products.png" alt="" />
-              <div class="oops-card-content">
-                <p class="api-card-title">Products API</p>
-                <p class="api-cards-des">
-                  In my product API project, I've employed JavaScript to
-                  interact with a furniture-related API, retrieving and
-                  showcasing a diverse range of furniture products.
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="api-card">
-            <a
-              href="./20-Filters/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-              <img src="./image/filters.png" alt="" />
-              <div class="oops-card-content">
-                <p class="api-card-title">Filters</p>
-                <p class="api-cards-des">
-                  In my project featuring product filtering, I've employed
-                  JavaScript and API integration to enhance a product listing
-                  application. Users can now refine their searches, accessing
-                  tailored product selections.
-                </p>
-              </div>
-            </a>
-          </div>
-          <p class="apiname3">Filters</p>
-          <div class="api-card">
-            <a
-              href="./24-Cocktails/index.html"
-              class="work1-link"
-              target=" "
-              rel="noopener noreferrer"
-            >
-            <img src="./image/cocktail.png" alt="" />
-            <div class="oops-card-content">
-              <p class="api-card-title">Cocktail</p>
-              <p class="api-cards-des">
-                In this project showcasing the Cocktail API, dynamic cocktail
-                data has been seamlessly integrated using JavaScript. Users can
-                now explore a diverse range of cocktails directly within the
-                application. The implementation of JavaScript has truly enhanced
-                the overall experience, making it both engaging and interactive.
-              </p>
-            </div>
-            </a>
+
+        <div class="icon" id="chrome-icon" data-app="chrome" tabindex="0">
+          <img src="assets/icons/chrome.svg" alt="Chrome" />
+          <span>Chrome</span>
+        </div>
+
+        <div class="icon" id="terminal-icon" data-app="terminal" tabindex="0">
+          <img src="assets/icons/windows-terminal.svg" alt="Terminal" />
+          <span>Terminal</span>
+        </div>
+
+        <div
+          class="icon"
+          id="recyclebin-icon"
+          data-app="recyclebin"
+          tabindex="0"
+        >
+          <img src="assets/icons/Recycle.png" alt="Recycle-Bin" />
+          <span>Recycle Bin</span>
+        </div>
+
+        <div class="icon" id="pdf-icon" data-app="resume" tabindex="0">
+          <img src="assets/icons/pdf.png" alt="PDF" />
+          <span>Resume</span>
+        </div>
+
+        <div class="icon" id="thispc-icon" data-app="thispc" tabindex="0">
+          <img src="assets/icons/thispc.png" alt="ThisPC" />
+          <span>This PC</span>
+        </div>
+      </div>
+
+      <!-- 🪟 Start Menu & Taskbar -->
+
+      <!-- 🟦 Taskbar -->
+      <div class="taskbar">
+        <!-- 🌥️ Leftmost: Weather -->
+        <a href="../0-Weather-App/index.html" target="_blank">
+          <div class="taskbar-left-extreme">
+            <img src="assets/icons/wether.png" alt="Cloud" />
+            <div class="weather-text">
+              <div>26°C</div>
+              <div>Mostly Cloudy</div>
             </div>
           </div>
-          <p class="apiname4">Cockatail</p>
-        </div>
-      </div>
-    </section>
-    <article class="other-works">
-      <section class="other-works-info">
-        <h2 class="featured-works">Fun With JavaScript</h2>
-        <div class="title-underline"></div>
-        <!-- cards -->
-        <div class="wrapper">
-          <div class="cards">
-            <figure class="card">
-              <a
-                href="./01-ColorFlipper/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/cf.png"". alt=""class="img-fun" />
+        </a>
 
-                <figcaption>Color Flipper</figcaption>
-              </a>
-            </figure>
+        <!-- 🔁 Wrapper for centered + side icons -->
 
-            <figure class="card">
-              <a
-                href="./03-Reviews/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/REVIEWS.png"" alt=""class="img-fun" />
+        <div class="taskbar-main">
+          <!-- 👈 Left of center icons -->
+          <!-- 🔳 Dynamic taskbar icon for active folder -->
+          <!-- <div
+            id="taskbar-folder-icon"
+            class="taskbar-icon"
+            style="display: none"
+          >
+            <img src="assets/icons/windows-folder.svg" alt="Folder" />
+          </div> -->
 
-                <figcaption>Reviews</figcaption>
-              </a>
-            </figure>
-
-            <figure class="card">
-              <a
-                href="./04-Navbar/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/navbaR.png"" alt=""class="img-fun" />
-
-                <figcaption>Navbar</figcaption>
-              </a>
-            </figure>
-
-            <figure class="card">
-              <a
-                href="./05-Sidebar/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/sideBAR.png"" alt=""class="img-fun" />
-
-                <figcaption>Sidebar</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./06-Modal/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/MODALPOPUP.png"" alt=""class="img-fun" />
-
-                <figcaption>Modal Popup</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./07-Questions/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/questions.png"" alt=""class="img-fun" />
-
-                <figcaption>Questions</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./08-Menu/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/ourMENU.png" alt="" class="img-fun" />
-
-                <figcaption>Menu</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./09-Video/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/videoProj.png" alt="" class="img-fun" />
-
-                <figcaption>Video</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./10-Scroll/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/ScrollPro.png" alt="" class="img-fun" />
-
-                <figcaption>Scroll</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./11-Tabs/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/tabspro.png" alt="" class="img-fun" />
-
-                <figcaption>Tabs</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./12-CountDown/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/ct.png" alt="" class="img-fun" />
-
-                <figcaption>Coutdown</figcaption>
-              </a>
-            </figure>
-            <figure class="card">
-              <a
-                href="./14- Grocery Bud/index.html"
-                class="work1-link"
-                target=" "
-                rel="noopener noreferrer"
-              >
-                <img src="./image/gb.png" alt="" class="img-fun" />
-
-                <figcaption>Grocery Bud</figcaption>
-              </a>
-            </figure>
+          <div class="taskbar-left-side">
+            <img src="assets/icons/chrome.svg" class="icon-size" alt="Chrome" />
+            <img src="assets/icons/thispc.png" class="icon-size" alt="ThisPC" />
+            <a href="./index.html">
+              <img
+                src="assets/icons/switchOS.png"
+                class="icon-size"
+                alt="Switch"
+              />
+            </a>
           </div>
-        </div>
-      </section>
-    </article>
 
-    <div class="placeholder-content"></div>
-    <!-- footer -->
-    <footer>
-      <div class="footer-content">
-        <h3>Contact ME</h3>
-        <p>
-          Thank you for visiting my website! If you'd like to get in touch, feel
-          free to reach out to me via LinkedIn or email. I welcome any
-          inquiries, feedback, or collaboration opportunities. Looking forward
-          to connecting with you!
-        </p>
-        <ul class="socials">
-          <li>
+          <!-- 🪟 Centered Windows Button -->
+          <div class="taskbar-center">
+            <button id="start-button">
+              <img src="assets/icons/windows-start.svg" alt="Start" />
+            </button>
+          </div>
+
+          <!-- 👉 Right of center icons -->
+          <div class="taskbar-right-side">
+            <img
+              src="assets/icons/music-player.png"
+              class="icon-size"
+              alt="Music"
+            />
+            <a href="../17-Gallery/index.html" target="_blank">
+              <img
+                src="assets/icons/gallery.png"
+                class="icon-size"
+                alt="Photos"
+              />
+            </a>
             <a
-              href="https://www.linkedin.com/in/snehil-dwivedi-"
+              href="./assets/project-tumbnails/temp-resume.pdf"
               target="_blank"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <img src="assets/icons/pdf.png" class="icon-size" alt="PDF" />
             </a>
-          </li>
-          <li>
-            <a href="mailto:snehildwivedi03@gmail.com">
-              <i class="far fas fa-envelope-open"></i>
-            </a>
-          </li>
-        </ul>
+            <!-- Dynamic folder taskbar icon shown when open -->
+            <div
+              id="taskbar-folder-icon"
+              class="taskbar-icon"
+              style="display: none"
+            >
+              <img src="assets/icons/windows-folder.svg" alt="Folder" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 🕒 Rightmost System Info -->
+        <div class="taskbar-right-extreme">
+          <i class="fas fa-wifi"></i>
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-volume-high"></i>
+          <div id="clock">10:47 AM</div>
+          <div id="date">16-10-2024</div>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>Made With <i class="fas fa-heart" id="love"></i> by Snehil</p>
+
+      <!-- End of taskbar -->
+
+      <!-- 🪟 Start Menu (Centered) -->
+      <div class="center">
+        <div class="startmenu" id="start-menu">
+          <div class="sTop">
+            <div class="pinnedlabel">
+              <!-- Shows the text "Pinned" -->
+              Pinned
+            </div>
+            <div class="allapps">
+              <i class="fas fa-search search-icon-menu" id="search-toggle"></i>
+
+              <div class="search-wrapper">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Type to search..."
+                  class="search-input"
+                />
+                <i class="fas fa-times close-icon" id="search-close"></i>
+              </div>
+            </div>
+          </div>
+          <div class="sAppscontainer">
+            <div class="sApps">
+              <div class="starticons">
+                <img src="assets/icons/chrome.svg" />
+                <p class="startlabels" align="center">Chrome</p>
+              </div>
+
+              <div class="starticons">
+                <img src="assets/icons/pdf.png" alt="PDF" />
+                <p class="startlabels" align="center">Resume</p>
+              </div>
+
+              <div class="starticons">
+                <img src="assets/icons/windows-terminal.svg" alt="Terminal" />
+                <p class="startlabels" align="center">Terminal</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script src="./script.js"></script>
+      <!-- End of start menu content -->
+
+      <!--Start Folder strucutre -->
+      <!-- 📁 Folder Window -->
+      <div class="folder-window" id="folder-window">
+        <!-- 🔷 Top Bar -->
+        <div class="folder-header">
+          <span class="folder-title">Projects</span>
+          <div class="window-controls">
+            <i class="fas fa-window-minimize minimize-btn"></i>
+            <i class="fas fa-window-maximize maximize-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+          </div>
+        </div>
+
+        <!-- 📑 Body -->
+        <div class="folder-body">
+          <!-- 📁 Sidebar -->
+          <div class="folder-sidebar">
+            <ul>
+              <!-- <li>📁 Desktop</li> -->
+              <li>
+                <i class="fas fa-laptop"></i>
+                Desktop
+              </li>
+              <li>
+                <i class="fas fa-download"></i>
+                Downloads
+              </li>
+              <li>
+                <i class="far fa-file-pdf"></i>
+                Documents
+              </li>
+              <li>
+                <i class="fas fa-photo-video"></i>
+                Pictures
+              </li>
+              <li>
+                <i class="fas fa-music"></i>
+                Music
+              </li>
+              <li>
+                <i class="fa-solid fa-video"></i>
+                Videos
+              </li>
+            </ul>
+          </div>
+
+          <!-- 📂 Main Area -->
+          <div class="folder-main">
+            <div class="folder-grid">
+              <a href="../01-ColorFlipper/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>01-ColorFlipper</p>
+                </div>
+              </a>
+              <a href="../02-Counter/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>02-Counter</p>
+                </div>
+              </a>
+              <a href="../03-Reviews/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>03-Reviews</p>
+                </div>
+              </a>
+              <a href="../04-Navbar/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>04-Navbar</p>
+                </div>
+              </a>
+              <a href="../05-Sidebar/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>05-Sidebar</p>
+                </div>
+              </a>
+              <a href="../06-Modal/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>06-Modal</p>
+                </div>
+              </a>
+              <a href="../07-Questions/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>07-Questions</p>
+                </div>
+              </a>
+              <a href="../08-Menu/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>08-Menu</p>
+                </div>
+              </a>
+              <a href="../09-Video/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>09-Video</p>
+                </div>
+              </a>
+              <a href="../10-Scroll/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>10-Scroll</p>
+                </div>
+              </a>
+              <a href="../11-Tabs/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>11-Tabs</p>
+                </div>
+              </a>
+              <a href="../12-CountDown/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>12-CountDown</p>
+                </div>
+              </a>
+              <a href="../13-Lorem Ispum/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>13-Lorem</p>
+                </div>
+              </a>
+              <a href="../14-Grocery-Bud/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>14-Grocery-Bud</p>
+                </div>
+              </a>
+              <a href="../15-Slider/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>15-Slider</p>
+                </div>
+              </a>
+              <a href="../16-Counter-OOP/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>16-Counter-OOP</p>
+                </div>
+              </a>
+              <a href="../17-Gallery/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>17-Gallery</p>
+                </div>
+              </a>
+              <a href="../18-Numbers/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>18-Numbers</p>
+                </div>
+              </a>
+              <a href="../19-DarkMode/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>19-DarkMode</p>
+                </div>
+              </a>
+              <a href="../20-Filters/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>20-Filters</p>
+                </div>
+              </a>
+              <a href="../21-Dad Jokes/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>21-Dad</p>
+                </div>
+              </a>
+              <a href="../22-Products/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>22-Products</p>
+                </div>
+              </a>
+              <a href="../23-Random-User/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>23-Random-User</p>
+                </div>
+              </a>
+              <a href="../24-Cocktails/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>24-Cocktails</p>
+                </div>
+              </a>
+              <a href="../25-Slider-ES6/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>25-Slider-ES6</p>
+                </div>
+              </a>
+              <a href="../26-Stripe-SubMenu/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>26-Stripe-SubMenu</p>
+                </div>
+              </a>
+              <a href="../27-Pagination/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>27-Pagination</p>
+                </div>
+              </a>
+              <a href="../28-Wiki-API/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>28-Wiki-API</p>
+                </div>
+              </a>
+              <a href="../29-CapstoneProject- Comfy/index.html" target="_blank">
+                <div class="folder-item">
+                  <img src="assets/icons/windows-folder.svg" />
+                  <p>29-CapstoneProject-</p>
+                </div>
+              </a>
+              <!-- Repeat more folder/images -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End folder structure -->
+    </div>
+
+    <!-- End of windows theme -->
   </body>
+  <script src="./scripts.js"></script>
 </html>
