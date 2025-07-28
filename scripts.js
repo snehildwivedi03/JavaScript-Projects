@@ -43,9 +43,17 @@ document.querySelectorAll(".os-btn").forEach((btn) => {
     // Show loader
     osLoader.style.display = "flex";
 
+    // After loader, redirect or continue based on OS
     setTimeout(() => {
       osLoader.style.display = "none";
-      document.getElementById("desktop").style.display = "block";
+
+      if (os === "windows") {
+        document.getElementById("desktop").style.display = "block";
+      } else if (os === "linux") {
+        window.location.href = "./linux.html"; // ✅ Use ./ for relative path
+      } else if (os === "macos") {
+        window.location.href = "./macOS.html"; // ✅ Use ./ for relative path
+      }
     }, 2500);
   });
 });
